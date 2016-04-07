@@ -45,6 +45,9 @@
 		E8A163F71CA873FE0042072C /* PlaceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A163E11CA873FE0042072C /* PlaceInfo.swift */; };
 		E8C53B081CB6FD5700297BEB /* DBController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C53B071CB6FD5700297BEB /* DBController.swift */; };
 		E8C53B091CB6FD5700297BEB /* DBController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C53B071CB6FD5700297BEB /* DBController.swift */; };
+		E8C87A371CB704740070550E /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C87A361CB704740070550E /* DataModel.swift */; };
+		E8C87A391CB709290070550E /* Towel.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = E8C87A381CB709290070550E /* Towel.sqlite */; };
+		E8C87A3B1CB70A650070550E /* PlacePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C87A3A1CB70A650070550E /* PlacePin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -139,6 +142,7 @@
 				E8A163DB1CA873FE0042072C /* User.swift */,
 				E8A163DA1CA873FE0042072C /* User+CoreDataProperties.swift */,
 				E8A163A21CA845300042072C /* ViewController.swift */,
+				E8C87A3A1CB70A650070550E /* PlacePin.swift */,
 			);
 			path = Towel;
 			sourceTree = "<group>";
@@ -259,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8A163EE1CA873FE0042072C /* PlaceDescription.swift in Sources */,
+				E8C87A3B1CB70A650070550E /* PlacePin.swift in Sources */,
 				E8A163E61CA873FE0042072C /* PlaceComment.swift in Sources */,
 				E8A163A31CA845300042072C /* ViewController.swift in Sources */,
 				E8A163F61CA873FE0042072C /* PlaceInfo.swift in Sources */,
