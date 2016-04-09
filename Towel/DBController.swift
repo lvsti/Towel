@@ -32,10 +32,15 @@ class DBController {
         // The persistent store coordinator for the application. This implementation creates and returns a coordinator, having added the store for the application to it. This property is optional since there are legitimate error conditions that could cause the creation of the store to fail.
         // Create the coordinator and store
         let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
-        let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("SingleViewCoreData.sqlite")
+        let url = NSBundle.mainBundle().URLForResource("Towel", withExtension: "sqlite")
         var failureReason = "There was an error creating or loading the application's saved data."
         do {
-            try coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil)
+            try coordinator.addPersistentStoreWithType(NSSQLiteStoreType,
+                configuration: nil,
+                URL: url,
+                options: [
+                    NSReadOnlyPersistentStoreOption: true,
+                    NSSQLitePragmasOption: ["journal_mode": "DELETE"]])
         } catch {
             // Report any error we got.
             var dict = [String: AnyObject]()
@@ -63,7 +68,7 @@ class DBController {
     
     // MARK: - Core Data Saving support
     
-    func saveContext () {
+    func saveContext() {
         if managedObjectContext.hasChanges {
             do {
                 try managedObjectContext.save()
