@@ -17,6 +17,6 @@ extension Place {
     @NSManaged var latitude: Double
     @NSManaged var longitude: Double
     @NSManaged var avgRating: Float
-    @NSManaged var placeInfo: NSManagedObject?
+    @NSManaged var placeInfo: PlaceInfo?
 
 }
