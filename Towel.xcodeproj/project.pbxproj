@@ -81,6 +81,7 @@
 		E8A163E11CA873FE0042072C /* PlaceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceInfo.swift; sourceTree = "<group>"; };
 		E8A163FC1CA88D460042072C /* places */ = {isa = PBXFileReference; lastKnownFileType = folder; path = places; sourceTree = "<group>"; };
 		E8C53B071CB6FD5700297BEB /* DBController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBController.swift; sourceTree = "<group>"; };
+		E8C87A361CB704740070550E /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				E8A163A01CA845300042072C /* AppDelegate.swift */,
+				E8C87A361CB704740070550E /* DataModel.swift */,
 				E8C53B071CB6FD5700297BEB /* DBController.swift */,
 				E8A163AA1CA845300042072C /* Assets.xcassets */,
 				E8A163AF1CA845300042072C /* Info.plist */,
@@ -279,6 +281,7 @@
 				E8A163F41CA873FE0042072C /* PlaceInfo+CoreDataProperties.swift in Sources */,
 				E8A163F01CA873FE0042072C /* Location+CoreDataProperties.swift in Sources */,
 				E8A163A11CA845300042072C /* AppDelegate.swift in Sources */,
+				E8C87A371CB704740070550E /* DataModel.swift in Sources */,
 				E8A163A91CA845300042072C /* Towel.xcdatamodeld in Sources */,
 				E8A163D61CA872230042072C /* Place.swift in Sources */,
 			);
