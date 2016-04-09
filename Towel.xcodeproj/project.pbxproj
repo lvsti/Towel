@@ -82,6 +82,7 @@
 		E8A163FC1CA88D460042072C /* places */ = {isa = PBXFileReference; lastKnownFileType = folder; path = places; sourceTree = "<group>"; };
 		E8C53B071CB6FD5700297BEB /* DBController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBController.swift; sourceTree = "<group>"; };
 		E8C87A361CB704740070550E /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		E8C87A3A1CB70A650070550E /* PlacePin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacePin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
