@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func importPlaces() {
         let mgr = NSFileManager.defaultManager()
-        let placesDirURL = applicationDocumentsDirectory.URLByAppendingPathComponent("places")
+        let placesDirURL = NSBundle.mainBundle().resourceURL!.URLByAppendingPathComponent("places")
         let placeFiles = try! mgr.contentsOfDirectoryAtPath(placesDirURL.path!)
         
         let lastImportedID = "\(lookUpLastImportedPlaceInfo()?.placeID ?? 0)"
