@@ -49,6 +49,9 @@
 		E8D1DAF61CB984C200825C89 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D1DADC1CB984AE00825C89 /* User.swift */; };
 		E8D1DAF71CB984C200825C89 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D1DADD1CB984AE00825C89 /* User+CoreDataProperties.swift */; };
 		E8D1DAF81CB984CA00825C89 /* Towel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E8D1DADA1CB984AE00825C89 /* Towel.xcdatamodeld */; };
+		E8E61E8E1CBAD8C100B2A741 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E61E8D1CBAD8C100B2A741 /* AppDelegate.swift */; };
+		E8E61E901CBAD8C100B2A741 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8E61E8F1CBAD8C100B2A741 /* Assets.xcassets */; };
+		E8E61E931CBAD8C100B2A741 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8E61E911CBAD8C100B2A741 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +62,7 @@
 		E8A163AA1CA845300042072C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8A163AD1CA845300042072C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8A163AF1CA845300042072C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8A163B91CA86D630042072C /* MapImporter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapImporter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8A163B91CA86D630042072C /* MapImporter-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MapImporter-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8A163BB1CA86D630042072C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8A163BD1CA86D630042072C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E8A163C01CA86D630042072C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -84,6 +87,11 @@
 		E8D1DADB1CB984AE00825C89 /* Towel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Towel.xcdatamodel; sourceTree = "<group>"; };
 		E8D1DADC1CB984AE00825C89 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E8D1DADD1CB984AE00825C89 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E8E61E8B1CBAD8C100B2A741 /* MapImporter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapImporter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8E61E8D1CBAD8C100B2A741 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E8E61E8F1CBAD8C100B2A741 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E8E61E921CBAD8C100B2A741 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		E8E61E941CBAD8C100B2A741 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +117,8 @@
 			children = (
 				E8A163FC1CA88D460042072C /* places */,
 				E8A1639F1CA845300042072C /* Towel */,
-				E8A163BA1CA86D630042072C /* MapImporter */,
+				E8A163BA1CA86D630042072C /* MapImporter-iOS */,
+				E8E61E8C1CBAD8C100B2A741 /* MapImporter */,
 				E8A1639E1CA845300042072C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -118,7 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				E8A1639D1CA845300042072C /* Towel.app */,
-				E8A163B91CA86D630042072C /* MapImporter.app */,
+				E8A163B91CA86D630042072C /* MapImporter-iOS.app */,
+				E8E61E8B1CBAD8C100B2A741 /* MapImporter.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,7 +150,7 @@
 			path = Towel;
 			sourceTree = "<group>";
 		};
-		E8A163BA1CA86D630042072C /* MapImporter */ = {
+		E8A163BA1CA86D630042072C /* MapImporter-iOS */ = {
 			isa = PBXGroup;
 			children = (
 				E8A163BB1CA86D630042072C /* AppDelegate.swift */,
@@ -150,7 +160,7 @@
 				E8A163C71CA86D630042072C /* LaunchScreen.storyboard */,
 				E8A163CA1CA86D630042072C /* Info.plist */,
 			);
-			path = MapImporter;
+			path = "MapImporter-iOS";
 			sourceTree = "<group>";
 		};
 		E8D1DACE1CB9847500825C89 /* DataModel */ = {
@@ -174,6 +184,17 @@
 			path = DataModel;
 			sourceTree = "<group>";
 		};
+		E8E61E8C1CBAD8C100B2A741 /* MapImporter */ = {
+			isa = PBXGroup;
+			children = (
+				E8E61E8D1CBAD8C100B2A741 /* AppDelegate.swift */,
+				E8E61E8F1CBAD8C100B2A741 /* Assets.xcassets */,
+				E8E61E911CBAD8C100B2A741 /* MainMenu.xib */,
+				E8E61E941CBAD8C100B2A741 /* Info.plist */,
+			);
+			path = MapImporter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -194,9 +215,9 @@
 			productReference = E8A1639D1CA845300042072C /* Towel.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E8A163B81CA86D630042072C /* MapImporter */ = {
+		E8A163B81CA86D630042072C /* MapImporter-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E8A163CB1CA86D630042072C /* Build configuration list for PBXNativeTarget "MapImporter" */;
+			buildConfigurationList = E8A163CB1CA86D630042072C /* Build configuration list for PBXNativeTarget "MapImporter-iOS" */;
 			buildPhases = (
 				E8A163B51CA86D630042072C /* Sources */,
 				E8A163B61CA86D630042072C /* Frameworks */,
@@ -206,9 +227,26 @@
 			);
 			dependencies = (
 			);
+			name = "MapImporter-iOS";
+			productName = MapImporter;
+			productReference = E8A163B91CA86D630042072C /* MapImporter-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E8E61E8A1CBAD8C100B2A741 /* MapImporter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8E61E951CBAD8C100B2A741 /* Build configuration list for PBXNativeTarget "MapImporter" */;
+			buildPhases = (
+				E8E61E871CBAD8C100B2A741 /* Sources */,
+				E8E61E881CBAD8C100B2A741 /* Frameworks */,
+				E8E61E891CBAD8C100B2A741 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
 			name = MapImporter;
 			productName = MapImporter;
-			productReference = E8A163B91CA86D630042072C /* MapImporter.app */;
+			productReference = E8E61E8B1CBAD8C100B2A741 /* MapImporter.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -217,7 +255,7 @@
 		E8A163951CA845300042072C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Tamas Lustyik";
 				TargetAttributes = {
@@ -226,6 +264,9 @@
 					};
 					E8A163B81CA86D630042072C = {
 						CreatedOnToolsVersion = 7.2;
+					};
+					E8E61E8A1CBAD8C100B2A741 = {
+						CreatedOnToolsVersion = 7.3;
 					};
 				};
 			};
@@ -243,7 +284,8 @@
 			projectRoot = "";
 			targets = (
 				E8A1639C1CA845300042072C /* Towel */,
-				E8A163B81CA86D630042072C /* MapImporter */,
+				E8A163B81CA86D630042072C /* MapImporter-iOS */,
+				E8E61E8A1CBAD8C100B2A741 /* MapImporter */,
 			);
 		};
 /* End PBXProject section */
@@ -268,6 +310,15 @@
 				E8A163C91CA86D630042072C /* LaunchScreen.storyboard in Resources */,
 				E8A163C61CA86D630042072C /* Assets.xcassets in Resources */,
 				E8A163C11CA86D630042072C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8E61E891CBAD8C100B2A741 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8E61E901CBAD8C100B2A741 /* Assets.xcassets in Resources */,
+				E8E61E931CBAD8C100B2A741 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +373,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E8E61E871CBAD8C100B2A741 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8E61E8E1CBAD8C100B2A741 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -355,6 +414,14 @@
 				E8A163C81CA86D630042072C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E8E61E911CBAD8C100B2A741 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E8E61E921CBAD8C100B2A741 /* Base */,
+			);
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -489,6 +556,38 @@
 			};
 			name = Release;
 		};
+		E8E61E961CBAD8C100B2A741 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MapImporter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = me.cocoagrinder.MapImporter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E8E61E971CBAD8C100B2A741 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MapImporter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = me.cocoagrinder.MapImporter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -510,7 +609,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E8A163CB1CA86D630042072C /* Build configuration list for PBXNativeTarget "MapImporter" */ = {
+		E8A163CB1CA86D630042072C /* Build configuration list for PBXNativeTarget "MapImporter-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E8A163CC1CA86D630042072C /* Debug */,
@@ -518,6 +617,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		E8E61E951CBAD8C100B2A741 /* Build configuration list for PBXNativeTarget "MapImporter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8E61E961CBAD8C100B2A741 /* Debug */,
+				E8E61E971CBAD8C100B2A741 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
