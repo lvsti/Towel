@@ -13,6 +13,9 @@
 		E82506561CBAE62C00458ED4 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82506551CBAE62C00458ED4 /* Location.swift */; };
 		E825065A1CBAE77600458ED4 /* PlaceDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82506591CBAE77600458ED4 /* PlaceDescription.swift */; };
 		E825065C1CBAE92600458ED4 /* PlaceComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E825065B1CBAE92600458ED4 /* PlaceComment.swift */; };
+		E825065E1CBAEA3A00458ED4 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = E825065D1CBAEA3A00458ED4 /* Query.swift */; };
+		E82506601CBAFBC300458ED4 /* Realm.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E8E61E981CBAD94D00B2A741 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E82506611CBAFBC300458ED4 /* RealmSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E8E61E991CBAD94E00B2A741 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E8A163A11CA845300042072C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A163A01CA845300042072C /* AppDelegate.swift */; };
 		E8A163A31CA845300042072C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A163A21CA845300042072C /* ViewController.swift */; };
 		E8A163A61CA845300042072C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8A163A41CA845300042072C /* Main.storyboard */; };
@@ -27,7 +30,6 @@
 		E8C53B091CB6FD5700297BEB /* DBController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C53B071CB6FD5700297BEB /* DBController.swift */; };
 		E8C87A391CB709290070550E /* Towel.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = E8C87A381CB709290070550E /* Towel.sqlite */; };
 		E8C87A3B1CB70A650070550E /* PlacePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C87A3A1CB70A650070550E /* PlacePin.swift */; };
-		E8D1DACC1CB967D200825C89 /* places in Resources */ = {isa = PBXBuildFile; fileRef = E8A163FC1CA88D460042072C /* places */; };
 		E8D1DADE1CB984AE00825C89 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D1DACF1CB984AE00825C89 /* DataModel.swift */; };
 		E8D1DADF1CB984AE00825C89 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D1DAD01CB984AE00825C89 /* Location.swift */; };
 		E8D1DAE01CB984AE00825C89 /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D1DAD11CB984AE00825C89 /* Location+CoreDataProperties.swift */; };
@@ -62,6 +64,20 @@
 		E8E61E9D1CBAD95900B2A741 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8E61E991CBAD94E00B2A741 /* RealmSwift.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E825065F1CBAFBB700458ED4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E82506601CBAFBC300458ED4 /* Realm.framework in CopyFiles */,
+				E82506611CBAFBC300458ED4 /* RealmSwift.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		E825064F1CBAE11400458ED4 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		E82506511CBAE3CC00458ED4 /* PlaceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceInfo.swift; sourceTree = "<group>"; };
@@ -69,6 +85,7 @@
 		E82506551CBAE62C00458ED4 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		E82506591CBAE77600458ED4 /* PlaceDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDescription.swift; sourceTree = "<group>"; };
 		E825065B1CBAE92600458ED4 /* PlaceComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceComment.swift; sourceTree = "<group>"; };
+		E825065D1CBAEA3A00458ED4 /* Query.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
 		E8A1639D1CA845300042072C /* Towel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Towel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8A163A01CA845300042072C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8A163A21CA845300042072C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,7 +100,6 @@
 		E8A163C51CA86D630042072C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8A163C81CA86D630042072C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8A163CA1CA86D630042072C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8A163FC1CA88D460042072C /* places */ = {isa = PBXFileReference; lastKnownFileType = folder; path = places; sourceTree = "<group>"; };
 		E8C53B071CB6FD5700297BEB /* DBController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBController.swift; sourceTree = "<group>"; };
 		E8C87A381CB709290070550E /* Towel.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Towel.sqlite; sourceTree = SOURCE_ROOT; };
 		E8C87A3A1CB70A650070550E /* PlacePin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacePin.swift; sourceTree = "<group>"; };
@@ -155,7 +171,6 @@
 			children = (
 				E8E61E981CBAD94D00B2A741 /* Realm.framework */,
 				E8E61E991CBAD94E00B2A741 /* RealmSwift.framework */,
-				E8A163FC1CA88D460042072C /* places */,
 				E8A1639F1CA845300042072C /* Towel */,
 				E8A163BA1CA86D630042072C /* MapImporter-iOS */,
 				E8E61E8C1CBAD8C100B2A741 /* MapImporter */,
@@ -232,6 +247,7 @@
 				E8E61E8F1CBAD8C100B2A741 /* Assets.xcassets */,
 				E8E61E911CBAD8C100B2A741 /* MainMenu.xib */,
 				E8E61E941CBAD8C100B2A741 /* Info.plist */,
+				E825065D1CBAEA3A00458ED4 /* Query.swift */,
 			);
 			path = MapImporter;
 			sourceTree = "<group>";
@@ -280,6 +296,7 @@
 				E8E61E871CBAD8C100B2A741 /* Sources */,
 				E8E61E881CBAD8C100B2A741 /* Frameworks */,
 				E8E61E891CBAD8C100B2A741 /* Resources */,
+				E825065F1CBAFBB700458ED4 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -347,7 +364,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8D1DACC1CB967D200825C89 /* places in Resources */,
 				E8A163C91CA86D630042072C /* LaunchScreen.storyboard in Resources */,
 				E8A163C61CA86D630042072C /* Assets.xcassets in Resources */,
 				E8A163C11CA86D630042072C /* Main.storyboard in Resources */,
@@ -422,6 +438,7 @@
 				E82506541CBAE5E500458ED4 /* User.swift in Sources */,
 				E82506521CBAE3CC00458ED4 /* PlaceInfo.swift in Sources */,
 				E82506561CBAE62C00458ED4 /* Location.swift in Sources */,
+				E825065E1CBAEA3A00458ED4 /* Query.swift in Sources */,
 				E8E61E8E1CBAD8C100B2A741 /* AppDelegate.swift in Sources */,
 				E825065A1CBAE77600458ED4 /* PlaceDescription.swift in Sources */,
 				E82506501CBAE11400458ED4 /* Place.swift in Sources */,
