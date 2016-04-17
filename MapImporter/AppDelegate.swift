@@ -66,10 +66,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let place = DBPlace()
         place._latitude = json["lat"]!.doubleValue
         place._longitude = json["lon"]!.doubleValue
-        place._avgRating = json["rating"]!.floatValue
+        if let exactRating = (json["rating_stats"]?["exact_rating"] as? NSNumber)?.floatValue {
+            place._avgRating = exactRating
+        } else {
+            place._avgRating = json["rating"]!.floatValue
+        }
+        
         if let stats = json["waiting_stats"] as? NSDictionary,
            let avg = stats["avg"] as? NSNumber {
-            place._avgWaiting.value = avg.floatValue
+            place._avgWaiting.value = avg.floatValue * 60
         }
 
         let info = DBPlaceInfo()
