@@ -36,6 +36,8 @@
 		E8A163C11CA86D630042072C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8A163BF1CA86D630042072C /* Main.storyboard */; };
 		E8A163C61CA86D630042072C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8A163C51CA86D630042072C /* Assets.xcassets */; };
 		E8A163C91CA86D630042072C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8A163C71CA86D630042072C /* LaunchScreen.storyboard */; };
+		E8D823FF1CC3901100046572 /* FBAnnotationClustering.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D823FE1CC3901100046572 /* FBAnnotationClustering.framework */; };
+		E8D824001CC3939400046572 /* FBAnnotationClustering.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E8D823FE1CC3901100046572 /* FBAnnotationClustering.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E8D824021CC3A24500046572 /* ClusterPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D824011CC3A24500046572 /* ClusterPinView.swift */; };
 		E8E61E8E1CBAD8C100B2A741 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E61E8D1CBAD8C100B2A741 /* AppDelegate.swift */; };
 		E8E61E901CBAD8C100B2A741 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8E61E8F1CBAD8C100B2A741 /* Assets.xcassets */; };
@@ -67,6 +69,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				E8D824001CC3939400046572 /* FBAnnotationClustering.framework in CopyFiles */,
 				E8FC3ED31CBC580200B0549E /* Realm.framework in CopyFiles */,
 				E8FC3ED41CBC580200B0549E /* RealmSwift.framework in CopyFiles */,
 			);
@@ -101,6 +104,7 @@
 		E8A163C81CA86D630042072C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8A163CA1CA86D630042072C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8D823FD1CC38F2300046572 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		E8D823FE1CC3901100046572 /* FBAnnotationClustering.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBAnnotationClustering.framework; path = Carthage/Build/iOS/FBAnnotationClustering.framework; sourceTree = "<group>"; };
 		E8D824011CC3A24500046572 /* ClusterPinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClusterPinView.swift; sourceTree = "<group>"; };
 		E8E61E8B1CBAD8C100B2A741 /* MapImporter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapImporter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E61E8D1CBAD8C100B2A741 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8D823FF1CC3901100046572 /* FBAnnotationClustering.framework in Frameworks */,
 				E8FC3ECE1CBC50EE00B0549E /* Realm.framework in Frameworks */,
 				E8FC3ECF1CBC50EE00B0549E /* RealmSwift.framework in Frameworks */,
 			);
@@ -160,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				E8D823FD1CC38F2300046572 /* Cartfile */,
+				E8D823FE1CC3901100046572 /* FBAnnotationClustering.framework */,
 				E8FC3ECC1CBC50EE00B0549E /* Realm.framework */,
 				E8FC3ECD1CBC50EE00B0549E /* RealmSwift.framework */,
 				E8E61E981CBAD94D00B2A741 /* Realm.framework */,
