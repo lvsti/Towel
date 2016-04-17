@@ -8,26 +8,8 @@
 
 import MapKit
 
-enum PinType {
-    case Excellent
-    case Good
-    case Average
-    case Poor
-    case Bad
-    
-    static func fromRating(rating: Float) -> PinType {
-        switch rating {
-        case let x where x > 4.0: return .Excellent
-        case let x where x > 3.0: return .Good
-        case let x where x > 2.0: return .Average
-        case let x where x > 1.0: return .Poor
-        default: return .Bad
-        }
-    }
-}
-
 class PlacePinView: MKAnnotationView {
-    static let _pinImageNames: [PinType: String] = [
+    static let _pinImageNames: [PlaceRating: String] = [
         .Excellent: "pin_exc",
         .Good: "pin_good",
         .Average: "pin_avg",
@@ -35,15 +17,7 @@ class PlacePinView: MKAnnotationView {
         .Bad: "pin_bad"
     ]
     
-    static let _ratingDescKeys: [PinType: String] = [
-        .Excellent: "Excellent",
-        .Good: "Good",
-        .Average: "Average",
-        .Poor: "Poor",
-        .Bad: "Bad"
-    ]
-    
-    static let _pinImages: [PinType: UIImage] = PlacePinView._pinImageNames
+    static let _pinImages: [PlaceRating: UIImage] = PlacePinView._pinImageNames
         .fmap { UIImage(named: $0)! }
     
     override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
@@ -62,20 +36,14 @@ class PlacePinView: MKAnnotationView {
     }
 
     func configure(place: Place) {
-        let type = PinType.fromRating(place.avgRating)
-        image = PlacePinView._pinImages[type]!
+        let rating = PlaceRating.fromValue(place.avgRating)
+        image = PlacePinView._pinImages[rating]!
     }
     
     static func titleForPlace(place: Place) -> String {
-        let type = PinType.fromRating(place.avgRating)
-        var title = "\u{1F44D}\u{1F3FC} " + PlacePinView._ratingDescKeys[type]! + "   \u{1F553} "
-        
-        if let minutes = place.avgWaiting {
-            title += (minutes >= 60 ? "\(Int(minutes) / 60)h " : "") + (Int(minutes) % 60 != 0 ? "\(Int(minutes) % 60)min" : "")
-        } else {
-            title += "N/A"
-        }
-        
+        let rating = PlaceRating.fromValue(place.avgRating)
+        let title = "\u{1F44D}\u{1F3FC} " + rating.toString() +
+            "   \u{1F553} " + (place.avgWaiting?.toString() ?? "N/A")
         return title
     }
 }
