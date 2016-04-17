@@ -38,6 +38,7 @@
 		E8A163C11CA86D630042072C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8A163BF1CA86D630042072C /* Main.storyboard */; };
 		E8A163C61CA86D630042072C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8A163C51CA86D630042072C /* Assets.xcassets */; };
 		E8A163C91CA86D630042072C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8A163C71CA86D630042072C /* LaunchScreen.storyboard */; };
+		E8D1DB011CB985F400825C89 /* PlaceInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D1DAFF1CB985F400825C89 /* PlaceInfoViewController.swift */; };
 		E8D823FF1CC3901100046572 /* FBAnnotationClustering.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D823FE1CC3901100046572 /* FBAnnotationClustering.framework */; };
 		E8D824001CC3939400046572 /* FBAnnotationClustering.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E8D823FE1CC3901100046572 /* FBAnnotationClustering.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E8D824021CC3A24500046572 /* ClusterPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D824011CC3A24500046572 /* ClusterPinView.swift */; };
@@ -107,6 +108,7 @@
 		E8A163C51CA86D630042072C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8A163C81CA86D630042072C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8A163CA1CA86D630042072C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8D1DAFF1CB985F400825C89 /* PlaceInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceInfoViewController.swift; sourceTree = "<group>"; };
 		E8D823FD1CC38F2300046572 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		E8D823FE1CC3901100046572 /* FBAnnotationClustering.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBAnnotationClustering.framework; path = Carthage/Build/iOS/FBAnnotationClustering.framework; sourceTree = "<group>"; };
 		E8D824011CC3A24500046572 /* ClusterPinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClusterPinView.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				E8D824011CC3A24500046572 /* ClusterPinView.swift */,
+				E8D1DAFF1CB985F400825C89 /* PlaceInfoViewController.swift */,
 				E828B63A1CB9984900D1A204 /* PlacePinView.swift */,
 			);
 			path = UI;
@@ -387,6 +390,7 @@
 				E83F64931CC3DD4A009142A9 /* EmojiFlags.swift in Sources */,
 				E828B63B1CB9984900D1A204 /* PlacePinView.swift in Sources */,
 				E82506651CBC4F9D00458ED4 /* PlaceDescription.swift in Sources */,
+				E8D1DB011CB985F400825C89 /* PlaceInfoViewController.swift in Sources */,
 				E82506641CBC4F9D00458ED4 /* PlaceComment.swift in Sources */,
 				E82506631CBC4F9D00458ED4 /* Place.swift in Sources */,
 				E8A163A31CA845300042072C /* MapViewController.swift in Sources */,

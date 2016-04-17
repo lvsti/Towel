@@ -1,17 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="O4Q-KM-04h">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="5hW-ec-gId">
+            <objects>
+                <navigationController id="O4Q-KM-04h" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="361-jT-I5S">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="NvM-l6-sXh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OkL-Pv-6zz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-590" y="-98.999999999999986"/>
+        </scene>
+        <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Towel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="Towel" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="gvu-g9-f8S"/>
+                        <viewControllerLayoutGuide type="bottom" id="m3n-q2-eqD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -23,19 +39,85 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="O7A-TY-bwm" secondAttribute="bottom" id="Jxe-pQ-pIe"/>
-                            <constraint firstItem="O7A-TY-bwm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SQJ-SA-czD"/>
-                            <constraint firstAttribute="trailing" secondItem="O7A-TY-bwm" secondAttribute="trailing" id="fux-2V-eDB"/>
-                            <constraint firstItem="O7A-TY-bwm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="w9F-zG-sSy"/>
+                            <constraint firstItem="m3n-q2-eqD" firstAttribute="top" secondItem="O7A-TY-bwm" secondAttribute="bottom" id="R0k-Rx-0If"/>
+                            <constraint firstAttribute="trailing" secondItem="O7A-TY-bwm" secondAttribute="trailing" id="acy-CI-t9Z"/>
+                            <constraint firstItem="O7A-TY-bwm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dSn-tp-ndi"/>
+                            <constraint firstItem="O7A-TY-bwm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iPp-NX-4A5"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="edi-vS-LjQ"/>
                     <connections>
                         <outlet property="mapView" destination="O7A-TY-bwm" id="Ujk-fU-58W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="408" y="339"/>
+            <point key="canvasLocation" x="196" y="-99"/>
+        </scene>
+        <!--#Info-->
+        <scene sceneID="fk8-N9-s3o">
+            <objects>
+                <viewController storyboardIdentifier="placeInfo" id="2Py-kp-cLK" customClass="PlaceInfoViewController" customModule="Towel" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ahq-Bf-qPk"/>
+                        <viewControllerLayoutGuide type="bottom" id="jl7-SL-fyC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="emw-OK-H0g">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#Hitchability:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5At-rr-Qjp">
+                                <rect key="frame" x="20" y="84" width="117" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#Most awesome spot ever" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qz7-gl-2Pp">
+                                <rect key="frame" x="192" y="84" width="211" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#Waiting time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSR-jx-Ig3">
+                                <rect key="frame" x="20" y="113" width="129" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#3h 14min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPg-Ze-8ow">
+                                <rect key="frame" x="192" y="113" width="211" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#Ravenholm, Zombie County" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7Q-Yo-ylw">
+                                <rect key="frame" x="20" y="20" width="331" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#Description bla bla bla" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ax-Ev-9zy">
+                                <rect key="frame" x="20" y="166" width="584" height="88"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="#Info" id="oAP-wn-zcJ"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="9ax-Ev-9zy" id="Xf8-Ob-yDX"/>
+                        <outlet property="ratingCaption" destination="5At-rr-Qjp" id="FKb-nb-wP9"/>
+                        <outlet property="ratingLabel" destination="Qz7-gl-2Pp" id="e5R-cP-caI"/>
+                        <outlet property="titleLabel" destination="A7Q-Yo-ylw" id="g3D-gM-AOT"/>
+                        <outlet property="waitingCaption" destination="aSR-jx-Ig3" id="6qn-73-14t"/>
+                        <outlet property="waitingLabel" destination="YPg-Ze-8ow" id="GoT-IH-6b8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BLh-4Y-D7p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="904" y="-99"/>
         </scene>
     </scenes>
 </document>

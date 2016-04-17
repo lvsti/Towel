@@ -80,15 +80,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, FBClusteringManage
     }
     
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        guard
-            let annotation = view.annotation as? PlaceAnnotation,
-            let place = annotation.place as? Place
-        else {
+        guard let annotation = view.annotation as? PlaceAnnotation else {
             return
         }
         
-        let pivc = PlaceInfoViewController(place: place)
-        
+        let infoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("placeInfo") as! PlaceInfoViewController
+        infoVC.place = annotation.place
+        navigationController?.pushViewController(infoVC, animated: true)
     }
     
 }
