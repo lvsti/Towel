@@ -11,23 +11,15 @@ import Foundation
 extension String {
     
     static func emojiFlagForCountryCode(code: String) -> String? {
-        guard code.characters.count == 2 else {
-            return nil
-        }
-        
-        let alphabetRange = 97...122
         guard
-            let firstValue = code.unicodeScalars.first?.value,
-            let lastValue = code.unicodeScalars.last?.value
-        where
-            alphabetRange.contains(Int(firstValue)) &&
-            alphabetRange.contains(Int(lastValue))
+            code.characters.count == 2 &&
+            NSLocale.currentLocale().displayNameForKey(NSLocaleCountryCode, value: code) != nil
         else {
             return nil
         }
-
-        let flagPrefix = UnicodeScalar(Int(firstValue) - 97 + 0x1F1E6)
-        let flagSuffix = UnicodeScalar(Int(lastValue) - 97 + 0x1F1E6)
+        
+        let flagPrefix = UnicodeScalar(Int(code.lowercaseString.unicodeScalars.first!.value) - 97 + 0x1F1E6)
+        let flagSuffix = UnicodeScalar(Int(code.lowercaseString.unicodeScalars.last!.value) - 97 + 0x1F1E6)
         
         return "\(flagPrefix)\(flagSuffix)"
     }
