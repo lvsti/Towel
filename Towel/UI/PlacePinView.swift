@@ -50,20 +50,18 @@ class PlacePinView: MKAnnotationView {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
         
         rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
+        canShowCallout = true
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        canShowCallout = true
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 
-    func configure() {
-        let placeAnnotation = annotation as! PlaceAnnotation
-        let place = placeAnnotation.place
+    func configure(place: Place) {
         let type = PinType.fromRating(place.avgRating)
         image = PlacePinView._pinImages[type]!
     }

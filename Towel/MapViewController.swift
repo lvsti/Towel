@@ -66,7 +66,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, FBClusteringManage
         if let place = annotation as? PlaceAnnotation {
             let pin = mapView.dequeueReusableAnnotationViewWithIdentifier("place") as? PlacePinView ??
                 PlacePinView(annotation: place, reuseIdentifier: "place")
-            pin.configure()
+            pin.configure(place.place)
             return pin
         }
         else if let cluster = annotation as? FBAnnotationCluster {
