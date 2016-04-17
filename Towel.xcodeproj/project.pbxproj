@@ -23,8 +23,6 @@
 		E82506661CBC4F9D00458ED4 /* PlaceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82506511CBAE3CC00458ED4 /* PlaceInfo.swift */; };
 		E82506671CBC4F9D00458ED4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82506531CBAE5E500458ED4 /* User.swift */; };
 		E82506691CBC4FAF00458ED4 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82506681CBC4FAF00458ED4 /* Query.swift */; };
-		E828B6371CB9916500D1A204 /* PlacePinCalloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E828B6361CB9916500D1A204 /* PlacePinCalloutView.xib */; };
-		E828B6391CB9966400D1A204 /* PlacePinCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E828B6381CB9966400D1A204 /* PlacePinCalloutView.swift */; };
 		E828B63B1CB9984900D1A204 /* PlacePinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E828B63A1CB9984900D1A204 /* PlacePinView.swift */; };
 		E828B63D1CB99F2800D1A204 /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = E828B63C1CB99F2800D1A204 /* Functional.swift */; };
 		E8A163A11CA845300042072C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A163A01CA845300042072C /* AppDelegate.swift */; };
@@ -87,8 +85,6 @@
 		E825065B1CBAE92600458ED4 /* PlaceComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceComment.swift; sourceTree = "<group>"; };
 		E825065D1CBAEA3A00458ED4 /* Query.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
 		E82506681CBC4FAF00458ED4 /* Query.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
-		E828B6361CB9916500D1A204 /* PlacePinCalloutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlacePinCalloutView.xib; sourceTree = "<group>"; };
-		E828B6381CB9966400D1A204 /* PlacePinCalloutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacePinCalloutView.swift; sourceTree = "<group>"; };
 		E828B63A1CB9984900D1A204 /* PlacePinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacePinView.swift; sourceTree = "<group>"; };
 		E828B63C1CB99F2800D1A204 /* Functional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functional.swift; sourceTree = "<group>"; };
 		E8A1639D1CA845300042072C /* Towel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Towel.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -224,8 +220,6 @@
 			children = (
 				E8D824011CC3A24500046572 /* ClusterPinView.swift */,
 				E828B63A1CB9984900D1A204 /* PlacePinView.swift */,
-				E828B6381CB9966400D1A204 /* PlacePinCalloutView.swift */,
-				E828B6361CB9916500D1A204 /* PlacePinCalloutView.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -349,7 +343,6 @@
 				E8A163AB1CA845300042072C /* Assets.xcassets in Resources */,
 				E8A163A61CA845300042072C /* Main.storyboard in Resources */,
 				E8FC3ED11CBC554300B0549E /* Towel.realm in Resources */,
-				E828B6371CB9916500D1A204 /* PlacePinCalloutView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,7 +374,6 @@
 			files = (
 				E8D824021CC3A24500046572 /* ClusterPinView.swift in Sources */,
 				E828B63B1CB9984900D1A204 /* PlacePinView.swift in Sources */,
-				E828B6391CB9966400D1A204 /* PlacePinCalloutView.swift in Sources */,
 				E82506651CBC4F9D00458ED4 /* PlaceDescription.swift in Sources */,
 				E82506641CBC4F9D00458ED4 /* PlaceComment.swift in Sources */,
 				E82506631CBC4F9D00458ED4 /* Place.swift in Sources */,

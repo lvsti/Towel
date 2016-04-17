@@ -20,7 +20,7 @@ class PlaceAnnotation: NSObject, MKAnnotation {
         return CLLocationCoordinate2DMake(place.latitude, place.longitude)
     }
     var title: String? {
-        return "\(place.avgRating)"
+        return PlacePinView.titleForPlace(place)
     }
 }
 

@@ -46,15 +46,9 @@ class PlacePinView: MKAnnotationView {
     static let _pinImages: [PinType: UIImage] = PlacePinView._pinImageNames
         .fmap { UIImage(named: $0)! }
     
-    static var _calloutView: PlacePinCalloutView = {
-        let nib = UINib(nibName: "PlacePinCalloutView", bundle: nil)
-        return nib.instantiateWithOwner(nil, options: nil).first as! PlacePinCalloutView
-    }()
-    
     override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
         
-        leftCalloutAccessoryView = PlacePinView._calloutView
         rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
     }
     
@@ -72,22 +66,18 @@ class PlacePinView: MKAnnotationView {
         let place = placeAnnotation.place
         let type = PinType.fromRating(place.avgRating)
         image = PlacePinView._pinImages[type]!
-        
-        NSLog("configure")
-
-        guard selected else {
-            return
-        }
-
-        let callout = PlacePinView._calloutView
-        callout.locationLabel?.text = place.placeInfo.location?.locality
-        callout.flagImage?.image = UIImage(named: "flag_\(place.placeInfo.location?.countryID)")
-        callout.ratingLabel?.text = PlacePinView._ratingDescKeys[type]
+    }
+    
+    static func titleForPlace(place: Place) -> String {
+        let type = PinType.fromRating(place.avgRating)
+        var title = "\u{1F44D}\u{1F3FC} " + PlacePinView._ratingDescKeys[type]! + "   \u{1F553} "
         
         if let minutes = place.avgWaiting {
-            callout.waitingLabel?.text = (minutes >= 60 ? "\(minutes / 60)h " : "") + (minutes % 60 != 0 ? "\(minutes % 60)min" : "")
+            title += (minutes >= 60 ? "\(Int(minutes) / 60)h " : "") + (Int(minutes) % 60 != 0 ? "\(Int(minutes) % 60)min" : "")
         } else {
-            callout.waitingLabel?.text = "N/A"
+            title += "N/A"
         }
+        
+        return title
     }
 }
