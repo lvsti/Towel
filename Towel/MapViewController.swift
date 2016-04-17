@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MapViewController.swift
 //  Towel
 //
 //  Created by Tamas Lustyik on 2016. 03. 27..
@@ -24,7 +24,7 @@ class PlaceAnnotation: NSObject, MKAnnotation {
     }
 }
 
-class ViewController: UIViewController, MKMapViewDelegate, FBClusteringManagerDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, FBClusteringManagerDelegate {
     @IBOutlet weak var mapView: MKMapView!
     
     private let _clusteringManager: FBClusteringManager
@@ -64,17 +64,31 @@ class ViewController: UIViewController, MKMapViewDelegate, FBClusteringManagerDe
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         if let place = annotation as? PlaceAnnotation {
-            let pin = PlacePinView(annotation: place, reuseIdentifier: "place")
+            let pin = mapView.dequeueReusableAnnotationViewWithIdentifier("place") as? PlacePinView ??
+                PlacePinView(annotation: place, reuseIdentifier: "place")
             pin.configure()
             return pin
         }
         else if let cluster = annotation as? FBAnnotationCluster {
-            let pin = ClusterPinView(annotation: cluster, reuseIdentifier: "cluster")
+            let pin = mapView.dequeueReusableAnnotationViewWithIdentifier("cluster") as? ClusterPinView ??
+                ClusterPinView(annotation: cluster, reuseIdentifier: "cluster")
             pin.count = UInt(cluster.annotations.count)
             return pin
         }
         
         return nil
+    }
+    
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        guard
+            let annotation = view.annotation as? PlaceAnnotation,
+            let place = annotation.place as? Place
+        else {
+            return
+        }
+        
+        let pivc = PlaceInfoViewController(place: place)
+        
     }
     
 }

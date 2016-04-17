@@ -27,7 +27,7 @@
 		E828B63D1CB99F2800D1A204 /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = E828B63C1CB99F2800D1A204 /* Functional.swift */; };
 		E83F64931CC3DD4A009142A9 /* EmojiFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83F64921CC3DD4A009142A9 /* EmojiFlags.swift */; };
 		E8A163A11CA845300042072C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A163A01CA845300042072C /* AppDelegate.swift */; };
-		E8A163A31CA845300042072C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A163A21CA845300042072C /* ViewController.swift */; };
+		E8A163A31CA845300042072C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A163A21CA845300042072C /* MapViewController.swift */; };
 		E8A163A61CA845300042072C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8A163A41CA845300042072C /* Main.storyboard */; };
 		E8A163AB1CA845300042072C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8A163AA1CA845300042072C /* Assets.xcassets */; };
 		E8A163AE1CA845300042072C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8A163AC1CA845300042072C /* LaunchScreen.storyboard */; };
@@ -91,7 +91,7 @@
 		E83F64921CC3DD4A009142A9 /* EmojiFlags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiFlags.swift; sourceTree = "<group>"; };
 		E8A1639D1CA845300042072C /* Towel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Towel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8A163A01CA845300042072C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E8A163A21CA845300042072C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E8A163A21CA845300042072C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		E8A163A51CA845300042072C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E8A163AA1CA845300042072C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8A163AD1CA845300042072C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -197,8 +197,8 @@
 				E8A163AF1CA845300042072C /* Info.plist */,
 				E8A163AC1CA845300042072C /* LaunchScreen.storyboard */,
 				E8A163A41CA845300042072C /* Main.storyboard */,
-				E8A163A21CA845300042072C /* ViewController.swift */,
 				E828B63C1CB99F2800D1A204 /* Functional.swift */,
+				E8A163A21CA845300042072C /* MapViewController.swift */,
 				E82506681CBC4FAF00458ED4 /* Query.swift */,
 				E83F64921CC3DD4A009142A9 /* EmojiFlags.swift */,
 			);
@@ -381,7 +381,7 @@
 				E82506651CBC4F9D00458ED4 /* PlaceDescription.swift in Sources */,
 				E82506641CBC4F9D00458ED4 /* PlaceComment.swift in Sources */,
 				E82506631CBC4F9D00458ED4 /* Place.swift in Sources */,
-				E8A163A31CA845300042072C /* ViewController.swift in Sources */,
+				E8A163A31CA845300042072C /* MapViewController.swift in Sources */,
 				E82506691CBC4FAF00458ED4 /* Query.swift in Sources */,
 				E828B63D1CB99F2800D1A204 /* Functional.swift in Sources */,
 				E82506671CBC4F9D00458ED4 /* User.swift in Sources */,
