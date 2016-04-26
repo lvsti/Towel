@@ -11,5 +11,4 @@ import Foundation
 protocol Location {
     var locality: String? { get }
     var countryID: String { get }
-    var continentID: String { get }
 }
