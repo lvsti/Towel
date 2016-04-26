@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E8240DC81CD002DF00535CE1 /* DBLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8240DC71CD002DF00535CE1 /* DBLocation.swift */; };
+		E8240DCA1CD0030500535CE1 /* DBPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8240DC91CD0030500535CE1 /* DBPlace.swift */; };
+		E8240DCC1CD003F200535CE1 /* DBPlaceComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8240DCB1CD003F200535CE1 /* DBPlaceComment.swift */; };
+		E8240DCE1CD0041000535CE1 /* DBPlaceDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8240DCD1CD0041000535CE1 /* DBPlaceDescription.swift */; };
+		E8240DD01CD0042800535CE1 /* DBPlaceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8240DCF1CD0042800535CE1 /* DBPlaceInfo.swift */; };
+		E8240DD21CD004A400535CE1 /* DBUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8240DD11CD004A400535CE1 /* DBUser.swift */; };
+		E8240DD31CD004BD00535CE1 /* DBLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8240DC71CD002DF00535CE1 /* DBLocation.swift */; };
+		E8240DD41CD004BD00535CE1 /* DBPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8240DC91CD0030500535CE1 /* DBPlace.swift */; };
+		E8240DD51CD004BD00535CE1 /* DBPlaceComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8240DCB1CD003F200535CE1 /* DBPlaceComment.swift */; };
+		E8240DD61CD004BD00535CE1 /* DBPlaceDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8240DCD1CD0041000535CE1 /* DBPlaceDescription.swift */; };
+		E8240DD71CD004BD00535CE1 /* DBPlaceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8240DCF1CD0042800535CE1 /* DBPlaceInfo.swift */; };
+		E8240DD81CD004BD00535CE1 /* DBUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8240DD11CD004A400535CE1 /* DBUser.swift */; };
 		E82506501CBAE11400458ED4 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = E825064F1CBAE11400458ED4 /* Place.swift */; };
 		E82506521CBAE3CC00458ED4 /* PlaceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82506511CBAE3CC00458ED4 /* PlaceInfo.swift */; };
 		E82506541CBAE5E500458ED4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82506531CBAE5E500458ED4 /* User.swift */; };
@@ -81,6 +93,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E8240DC71CD002DF00535CE1 /* DBLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBLocation.swift; sourceTree = "<group>"; };
+		E8240DC91CD0030500535CE1 /* DBPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBPlace.swift; sourceTree = "<group>"; };
+		E8240DCB1CD003F200535CE1 /* DBPlaceComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBPlaceComment.swift; sourceTree = "<group>"; };
+		E8240DCD1CD0041000535CE1 /* DBPlaceDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBPlaceDescription.swift; sourceTree = "<group>"; };
+		E8240DCF1CD0042800535CE1 /* DBPlaceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBPlaceInfo.swift; sourceTree = "<group>"; };
+		E8240DD11CD004A400535CE1 /* DBUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBUser.swift; sourceTree = "<group>"; };
 		E825064F1CBAE11400458ED4 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		E82506511CBAE3CC00458ED4 /* PlaceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceInfo.swift; sourceTree = "<group>"; };
 		E82506531CBAE5E500458ED4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -154,9 +172,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E8240DC61CD002AF00535CE1 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				E8240DC71CD002DF00535CE1 /* DBLocation.swift */,
+				E8240DC91CD0030500535CE1 /* DBPlace.swift */,
+				E8240DCB1CD003F200535CE1 /* DBPlaceComment.swift */,
+				E8240DCD1CD0041000535CE1 /* DBPlaceDescription.swift */,
+				E8240DCF1CD0042800535CE1 /* DBPlaceInfo.swift */,
+				E8240DD11CD004A400535CE1 /* DBUser.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
 		E825064E1CBAE0F300458ED4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E8240DC61CD002AF00535CE1 /* Realm */,
 				E82506551CBAE62C00458ED4 /* Location.swift */,
 				E825064F1CBAE11400458ED4 /* Place.swift */,
 				E825065B1CBAE92600458ED4 /* PlaceComment.swift */,
@@ -385,6 +417,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E88DCA941CC40360002BF26B /* WaitingTime.swift in Sources */,
+				E8240DD71CD004BD00535CE1 /* DBPlaceInfo.swift in Sources */,
+				E8240DD31CD004BD00535CE1 /* DBLocation.swift in Sources */,
+				E8240DD61CD004BD00535CE1 /* DBPlaceDescription.swift in Sources */,
 				E8D824021CC3A24500046572 /* ClusterPinView.swift in Sources */,
 				E88DCA921CC4006C002BF26B /* PlaceRating.swift in Sources */,
 				E83F64931CC3DD4A009142A9 /* EmojiFlags.swift in Sources */,
@@ -392,11 +427,14 @@
 				E82506651CBC4F9D00458ED4 /* PlaceDescription.swift in Sources */,
 				E8D1DB011CB985F400825C89 /* PlaceInfoViewController.swift in Sources */,
 				E82506641CBC4F9D00458ED4 /* PlaceComment.swift in Sources */,
+				E8240DD81CD004BD00535CE1 /* DBUser.swift in Sources */,
 				E82506631CBC4F9D00458ED4 /* Place.swift in Sources */,
+				E8240DD41CD004BD00535CE1 /* DBPlace.swift in Sources */,
 				E8A163A31CA845300042072C /* MapViewController.swift in Sources */,
 				E82506691CBC4FAF00458ED4 /* Query.swift in Sources */,
 				E828B63D1CB99F2800D1A204 /* Functional.swift in Sources */,
 				E82506671CBC4F9D00458ED4 /* User.swift in Sources */,
+				E8240DD51CD004BD00535CE1 /* DBPlaceComment.swift in Sources */,
 				E8A163A11CA845300042072C /* AppDelegate.swift in Sources */,
 				E82506621CBC4F9D00458ED4 /* Location.swift in Sources */,
 				E82506661CBC4F9D00458ED4 /* PlaceInfo.swift in Sources */,
@@ -417,12 +455,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				E825065C1CBAE92600458ED4 /* PlaceComment.swift in Sources */,
+				E8240DCA1CD0030500535CE1 /* DBPlace.swift in Sources */,
+				E8240DCE1CD0041000535CE1 /* DBPlaceDescription.swift in Sources */,
+				E8240DC81CD002DF00535CE1 /* DBLocation.swift in Sources */,
+				E8240DD01CD0042800535CE1 /* DBPlaceInfo.swift in Sources */,
 				E82506541CBAE5E500458ED4 /* User.swift in Sources */,
 				E82506521CBAE3CC00458ED4 /* PlaceInfo.swift in Sources */,
 				E82506561CBAE62C00458ED4 /* Location.swift in Sources */,
 				E825065E1CBAEA3A00458ED4 /* Query.swift in Sources */,
+				E8240DCC1CD003F200535CE1 /* DBPlaceComment.swift in Sources */,
 				E8E61E8E1CBAD8C100B2A741 /* AppDelegate.swift in Sources */,
 				E825065A1CBAE77600458ED4 /* PlaceDescription.swift in Sources */,
+				E8240DD21CD004A400535CE1 /* DBUser.swift in Sources */,
 				E82506501CBAE11400458ED4 /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
