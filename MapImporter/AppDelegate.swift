@@ -86,10 +86,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if let comments = json["comments"] as? [NSDictionary] where comments.count > 0 {
             comments.forEach { comment in
                 let placeComment = DBPlaceComment()
-                placeComment._commentID = Int32(comment["id"] as! String)!
                 placeComment._text = comment["comment"] as! String
                 if let datetime = comment["datetime"] as? String {
-                    placeComment._timestamp = parseDate(datetime)!
+                    placeComment._timestamp = parseAPIDate(datetime)!
                 }
                 
                 info._comments.append(placeComment)
@@ -105,7 +104,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 placeDesc._languageID = langID
                 placeDesc._text = desc["description"] as! String
                 if let datetime = desc["datetime"] as? String {
-                    placeDesc._timestamp = parseDate(datetime)!
+                    placeDesc._timestamp = parseAPIDate(datetime)!
                 }
                 
                 info._descriptions.append(placeDesc)
@@ -117,8 +116,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return place
     }
     
-    func parseDate(str: String) -> NSDate? {
-        return dateFormatter.dateFromString(str)
+    func parseAPIDate(str: String) -> NSDate? {
+        return apiDateFormatter.dateFromString(str)
     }
     
     func processLocation(json: NSDictionary?) -> DBLocation? {
@@ -140,7 +139,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return location
     }
 
-    lazy var dateFormatter: NSDateFormatter = {
+    lazy var apiDateFormatter: NSDateFormatter = {
         let fmt = NSDateFormatter()
         fmt.dateFormat = "yyyy-MM-dd HH:mm:ss"
         return fmt
