@@ -23,14 +23,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
-        dispatch_async(dispatch_get_main_queue(), importPlaces)
+        dispatch_async(dispatch_get_main_queue(), importPlacesFromAPIDB)
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
     }
 
-    func importPlaces() {
+    func importPlacesFromAPIDB() {
         let placesDirURL = NSURL(fileURLWithPath: "/Users/lvsti/tw/places/")
         let placeFiles = try! fileManager.contentsOfDirectoryAtPath(placesDirURL.path!)
         
@@ -91,7 +91,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 if let datetime = comment["datetime"] as? String {
                     placeComment._timestamp = parseDate(datetime)!
                 }
-                placeComment._user = processUser(comment["user"] as? NSDictionary)
                 
                 info._comments.append(placeComment)
             }
@@ -108,16 +107,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 if let datetime = desc["datetime"] as? String {
                     placeDesc._timestamp = parseDate(datetime)!
                 }
-                if let user = desc["fk_user"] as? String {
-                    placeDesc._user = Query.getUserByID(Int32(user)!)
-                }
                 
                 info._descriptions.append(placeDesc)
             }
         }
         
-        info._user = processUser(json["user"] as? NSDictionary)
-
         place._placeInfo = info
         
         return place
@@ -125,25 +119,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func parseDate(str: String) -> NSDate? {
         return dateFormatter.dateFromString(str)
-    }
-    
-    func processUser(json: NSDictionary?) -> DBUser? {
-        guard
-            let json = json,
-            let userIDStr = json["id"] as? String
-        else {
-            return nil
-        }
-        
-        let userID = Int32(userIDStr)!
-        if let user = Query.getUserByID(userID) {
-            return user
-        }
-        
-        let user = DBUser()
-        user._userID = userID
-        user._username = (json["name"] as! String)
-        return user
     }
     
     func processLocation(json: NSDictionary?) -> DBLocation? {

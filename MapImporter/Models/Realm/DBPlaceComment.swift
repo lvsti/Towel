@@ -14,8 +14,6 @@ class DBPlaceComment: Object {
     dynamic var _timestamp = NSDate()
     dynamic var _commentID: Int32 = 0
     
-    dynamic var _user: DBUser?
-    
     var _placeInfo: DBPlaceInfo {
         return linkingObjects(DBPlaceInfo.self, forProperty: "_comments").first!
     }

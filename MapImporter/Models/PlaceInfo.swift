@@ -15,7 +15,6 @@ protocol PlaceInfo {
     var location: Location? { get }
     var comments: AnyGenerator<PlaceComment> { get }
     var descriptions: AnyGenerator<PlaceDescription> { get }
-    var user: User { get }
     
     var place: Place { get }
 }

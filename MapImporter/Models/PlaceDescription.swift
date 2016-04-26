@@ -12,7 +12,6 @@ protocol PlaceDescription {
     var languageID: String { get }
     var text: String { get }
     var timestamp: NSDate? { get }
-    var user: User { get }
     var placeInfo: PlaceInfo { get }
 }
 

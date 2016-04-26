@@ -12,7 +12,6 @@ protocol PlaceComment {
     var text: String { get }
     var timestamp: NSDate { get }
     var commentID: Int32 { get }
-    var user: User { get }
     var placeInfo: PlaceInfo { get }
 }
 

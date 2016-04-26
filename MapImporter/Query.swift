@@ -16,11 +16,6 @@ class Query {
         return realm.objects(DBPlaceInfo).sorted("_placeID", ascending: false).first
     }
     
-    static func getUserByID(id: Int32) -> DBUser? {
-        let realm = try! Realm()
-        return realm.objects(DBUser).filter("_userID == %d", NSNumber(int: id)).first
-    }
-    
     static func getLocationForLocality(locality: String?, inCountry countryID: String) -> DBLocation? {
         let realm = try! Realm()
         var predicate: NSPredicate!
