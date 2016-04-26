@@ -15,6 +15,8 @@ protocol PlaceInfo {
     var location: Location? { get }
     var comments: AnyGenerator<PlaceComment> { get }
     var descriptions: AnyGenerator<PlaceDescription> { get }
+    var ratings: AnyGenerator<PlaceRating> { get }
+    var waitings: AnyGenerator<PlaceWaiting> { get }
     
     var place: Place { get }
 }

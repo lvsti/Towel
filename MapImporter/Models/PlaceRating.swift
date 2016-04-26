@@ -2,20 +2,20 @@
 //  PlaceRating.swift
 //  Towel
 //
-//  Created by Tamas Lustyik on 2016. 04. 17..
+//  Created by Tamas Lustyik on 2016. 04. 26..
 //  Copyright © 2016. Tamas Lustyik. All rights reserved.
 //
 
 import Foundation
 
-enum PlaceRating {
+enum Rating {
     case Excellent
     case Good
     case Average
     case Poor
     case Bad
     
-    static func fromValue(rating: Float) -> PlaceRating {
+    static func fromValue(rating: Float) -> Rating {
         switch rating {
         case let x where x > 4.0: return .Excellent
         case let x where x > 3.0: return .Good
@@ -26,14 +26,9 @@ enum PlaceRating {
     }
 }
 
-extension PlaceRating {
-    func toString() -> String {
-        return [
-            .Excellent: "Excellent",
-            .Good: "Good",
-            .Average: "Average",
-            .Poor: "Poor",
-            .Bad: "Bad"
-        ][self]!
-    }
+
+protocol PlaceRating {
+    var timestamp: NSDate? { get }
+    var value: Rating { get }
+    var placeInfo: PlaceInfo { get }
 }

@@ -16,7 +16,9 @@ class DBPlaceInfo: Object {
     dynamic var _location: DBLocation?
     let _comments = List<DBPlaceComment>()
     let _descriptions = List<DBPlaceDescription>()
-    
+    let _ratings = List<DBPlaceRating>()
+    let _waitings = List<DBPlaceWaiting>()
+
     var _place: DBPlace {
         return linkingObjects(DBPlace.self, forProperty: "_placeInfo").first!
     }
@@ -33,6 +35,14 @@ extension DBPlaceInfo: PlaceInfo {
     }
     var descriptions: AnyGenerator<PlaceDescription> {
         let realmGenerator = _descriptions.generate()
+        return AnyGenerator { return realmGenerator.next() }
+    }
+    var ratings: AnyGenerator<PlaceRating> {
+        let realmGenerator = _ratings.generate()
+        return AnyGenerator { return realmGenerator.next() }
+    }
+    var waitings: AnyGenerator<PlaceWaiting> {
+        let realmGenerator = _waitings.generate()
         return AnyGenerator { return realmGenerator.next() }
     }
     

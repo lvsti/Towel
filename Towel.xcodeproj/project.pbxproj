@@ -17,6 +17,14 @@
 		E8240DD51CD004BD00535CE1 /* DBPlaceComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8240DCB1CD003F200535CE1 /* DBPlaceComment.swift */; };
 		E8240DD61CD004BD00535CE1 /* DBPlaceDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8240DCD1CD0041000535CE1 /* DBPlaceDescription.swift */; };
 		E8240DD71CD004BD00535CE1 /* DBPlaceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8240DCF1CD0042800535CE1 /* DBPlaceInfo.swift */; };
+		E8240DDA1CD00A0800535CE1 /* DBPlaceRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8240DD91CD00A0800535CE1 /* DBPlaceRating.swift */; };
+		E8240DDC1CD00A1700535CE1 /* PlaceRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8240DDB1CD00A1700535CE1 /* PlaceRating.swift */; };
+		E8240DDE1CD00B7600535CE1 /* DBPlaceWaiting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8240DDD1CD00B7600535CE1 /* DBPlaceWaiting.swift */; };
+		E8240DE01CD00B8500535CE1 /* PlaceWaiting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8240DDF1CD00B8500535CE1 /* PlaceWaiting.swift */; };
+		E8240DE11CD00C3C00535CE1 /* DBPlaceRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8240DD91CD00A0800535CE1 /* DBPlaceRating.swift */; };
+		E8240DE21CD00C3C00535CE1 /* DBPlaceWaiting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8240DDD1CD00B7600535CE1 /* DBPlaceWaiting.swift */; };
+		E8240DE31CD00C4100535CE1 /* PlaceRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8240DDB1CD00A1700535CE1 /* PlaceRating.swift */; };
+		E8240DE41CD00C4100535CE1 /* PlaceWaiting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8240DDF1CD00B8500535CE1 /* PlaceWaiting.swift */; };
 		E82506501CBAE11400458ED4 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = E825064F1CBAE11400458ED4 /* Place.swift */; };
 		E82506521CBAE3CC00458ED4 /* PlaceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82506511CBAE3CC00458ED4 /* PlaceInfo.swift */; };
 		E82506561CBAE62C00458ED4 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82506551CBAE62C00458ED4 /* Location.swift */; };
@@ -34,7 +42,7 @@
 		E828B63B1CB9984900D1A204 /* PlacePinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E828B63A1CB9984900D1A204 /* PlacePinView.swift */; };
 		E828B63D1CB99F2800D1A204 /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = E828B63C1CB99F2800D1A204 /* Functional.swift */; };
 		E83F64931CC3DD4A009142A9 /* EmojiFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83F64921CC3DD4A009142A9 /* EmojiFlags.swift */; };
-		E88DCA921CC4006C002BF26B /* PlaceRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88DCA911CC4006C002BF26B /* PlaceRating.swift */; };
+		E88DCA921CC4006C002BF26B /* RatingExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88DCA911CC4006C002BF26B /* RatingExt.swift */; };
 		E88DCA941CC40360002BF26B /* WaitingTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88DCA931CC40360002BF26B /* WaitingTime.swift */; };
 		E8A163A11CA845300042072C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A163A01CA845300042072C /* AppDelegate.swift */; };
 		E8A163A31CA845300042072C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A163A21CA845300042072C /* MapViewController.swift */; };
@@ -94,6 +102,10 @@
 		E8240DCB1CD003F200535CE1 /* DBPlaceComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBPlaceComment.swift; sourceTree = "<group>"; };
 		E8240DCD1CD0041000535CE1 /* DBPlaceDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBPlaceDescription.swift; sourceTree = "<group>"; };
 		E8240DCF1CD0042800535CE1 /* DBPlaceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBPlaceInfo.swift; sourceTree = "<group>"; };
+		E8240DD91CD00A0800535CE1 /* DBPlaceRating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBPlaceRating.swift; sourceTree = "<group>"; };
+		E8240DDB1CD00A1700535CE1 /* PlaceRating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceRating.swift; sourceTree = "<group>"; };
+		E8240DDD1CD00B7600535CE1 /* DBPlaceWaiting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBPlaceWaiting.swift; sourceTree = "<group>"; };
+		E8240DDF1CD00B8500535CE1 /* PlaceWaiting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceWaiting.swift; sourceTree = "<group>"; };
 		E825064F1CBAE11400458ED4 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		E82506511CBAE3CC00458ED4 /* PlaceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceInfo.swift; sourceTree = "<group>"; };
 		E82506551CBAE62C00458ED4 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -104,7 +116,7 @@
 		E828B63A1CB9984900D1A204 /* PlacePinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacePinView.swift; sourceTree = "<group>"; };
 		E828B63C1CB99F2800D1A204 /* Functional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functional.swift; sourceTree = "<group>"; };
 		E83F64921CC3DD4A009142A9 /* EmojiFlags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiFlags.swift; sourceTree = "<group>"; };
-		E88DCA911CC4006C002BF26B /* PlaceRating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceRating.swift; sourceTree = "<group>"; };
+		E88DCA911CC4006C002BF26B /* RatingExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingExt.swift; sourceTree = "<group>"; };
 		E88DCA931CC40360002BF26B /* WaitingTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitingTime.swift; sourceTree = "<group>"; };
 		E8A1639D1CA845300042072C /* Towel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Towel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8A163A01CA845300042072C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +186,8 @@
 				E8240DCB1CD003F200535CE1 /* DBPlaceComment.swift */,
 				E8240DCD1CD0041000535CE1 /* DBPlaceDescription.swift */,
 				E8240DCF1CD0042800535CE1 /* DBPlaceInfo.swift */,
+				E8240DD91CD00A0800535CE1 /* DBPlaceRating.swift */,
+				E8240DDD1CD00B7600535CE1 /* DBPlaceWaiting.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -187,6 +201,8 @@
 				E825065B1CBAE92600458ED4 /* PlaceComment.swift */,
 				E82506591CBAE77600458ED4 /* PlaceDescription.swift */,
 				E82506511CBAE3CC00458ED4 /* PlaceInfo.swift */,
+				E8240DDB1CD00A1700535CE1 /* PlaceRating.swift */,
+				E8240DDF1CD00B8500535CE1 /* PlaceWaiting.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -408,21 +424,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8240DE11CD00C3C00535CE1 /* DBPlaceRating.swift in Sources */,
 				E88DCA941CC40360002BF26B /* WaitingTime.swift in Sources */,
 				E8240DD71CD004BD00535CE1 /* DBPlaceInfo.swift in Sources */,
+				E8240DE31CD00C4100535CE1 /* PlaceRating.swift in Sources */,
 				E8240DD31CD004BD00535CE1 /* DBLocation.swift in Sources */,
 				E8240DD61CD004BD00535CE1 /* DBPlaceDescription.swift in Sources */,
 				E8D824021CC3A24500046572 /* ClusterPinView.swift in Sources */,
-				E88DCA921CC4006C002BF26B /* PlaceRating.swift in Sources */,
+				E88DCA921CC4006C002BF26B /* RatingExt.swift in Sources */,
 				E83F64931CC3DD4A009142A9 /* EmojiFlags.swift in Sources */,
 				E828B63B1CB9984900D1A204 /* PlacePinView.swift in Sources */,
 				E82506651CBC4F9D00458ED4 /* PlaceDescription.swift in Sources */,
 				E8D1DB011CB985F400825C89 /* PlaceInfoViewController.swift in Sources */,
 				E82506641CBC4F9D00458ED4 /* PlaceComment.swift in Sources */,
+				E8240DE21CD00C3C00535CE1 /* DBPlaceWaiting.swift in Sources */,
 				E82506631CBC4F9D00458ED4 /* Place.swift in Sources */,
 				E8240DD41CD004BD00535CE1 /* DBPlace.swift in Sources */,
 				E8A163A31CA845300042072C /* MapViewController.swift in Sources */,
 				E82506691CBC4FAF00458ED4 /* Query.swift in Sources */,
+				E8240DE41CD00C4100535CE1 /* PlaceWaiting.swift in Sources */,
 				E828B63D1CB99F2800D1A204 /* Functional.swift in Sources */,
 				E8240DD51CD004BD00535CE1 /* DBPlaceComment.swift in Sources */,
 				E8A163A11CA845300042072C /* AppDelegate.swift in Sources */,
@@ -449,12 +469,16 @@
 				E8240DCE1CD0041000535CE1 /* DBPlaceDescription.swift in Sources */,
 				E8240DC81CD002DF00535CE1 /* DBLocation.swift in Sources */,
 				E8240DD01CD0042800535CE1 /* DBPlaceInfo.swift in Sources */,
+				E8240DE01CD00B8500535CE1 /* PlaceWaiting.swift in Sources */,
 				E82506521CBAE3CC00458ED4 /* PlaceInfo.swift in Sources */,
+				E8240DDC1CD00A1700535CE1 /* PlaceRating.swift in Sources */,
 				E82506561CBAE62C00458ED4 /* Location.swift in Sources */,
 				E825065E1CBAEA3A00458ED4 /* Query.swift in Sources */,
 				E8240DCC1CD003F200535CE1 /* DBPlaceComment.swift in Sources */,
 				E8E61E8E1CBAD8C100B2A741 /* AppDelegate.swift in Sources */,
+				E8240DDA1CD00A0800535CE1 /* DBPlaceRating.swift in Sources */,
 				E825065A1CBAE77600458ED4 /* PlaceDescription.swift in Sources */,
+				E8240DDE1CD00B7600535CE1 /* DBPlaceWaiting.swift in Sources */,
 				E82506501CBAE11400458ED4 /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
