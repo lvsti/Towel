@@ -11,7 +11,7 @@ import Foundation
 protocol Place {
     var latitude: Double { get }
     var longitude: Double { get }
-    var avgRating: Float { get }
+    var avgRating: Float? { get }
     var avgWaiting: NSTimeInterval? { get }
     var placeInfo: PlaceInfo { get }
 }

@@ -12,7 +12,7 @@ import RealmSwift
 class DBPlace: Object {
     dynamic var _latitude: Double = 0.0
     dynamic var _longitude: Double = 0.0
-    dynamic var _avgRating: Float = 0.0
+    let _avgRating = RealmOptional<Float>()
     let _avgWaiting = RealmOptional<Float>()
     dynamic var _placeInfo: DBPlaceInfo?
 }
@@ -20,7 +20,7 @@ class DBPlace: Object {
 extension DBPlace: Place {
     var latitude: Double { return _latitude }
     var longitude: Double { return _longitude }
-    var avgRating: Float { return _avgRating }
+    var avgRating: Float? { return _avgRating.value }
     var avgWaiting: NSTimeInterval? { return _avgWaiting.value != nil ? Double(_avgWaiting.value!) : nil }
     var placeInfo: PlaceInfo { return _placeInfo! }
 }
