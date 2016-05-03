@@ -29,23 +29,35 @@ extension DBPlaceInfo: PlaceInfo {
     var altitude: Double? { return _altitude.value }
     
     var location: Location? { return _location }
-    var comments: AnyGenerator<PlaceComment> {
-        let realmGenerator = _comments.generate()
-        return AnyGenerator { return realmGenerator.next() }
-    }
-    var descriptions: AnyGenerator<PlaceDescription> {
-        let realmGenerator = _descriptions.generate()
-        return AnyGenerator { return realmGenerator.next() }
-    }
-    var ratings: AnyGenerator<PlaceRating> {
-        let realmGenerator = _ratings.generate()
-        return AnyGenerator { return realmGenerator.next() }
-    }
-    var waitings: AnyGenerator<PlaceWaiting> {
-        let realmGenerator = _waitings.generate()
-        return AnyGenerator { return realmGenerator.next() }
+    
+    var comments: ToMany<PlaceComment> {
+        return ToMany<PlaceComment>(
+            countFunc: { return self._comments.count },
+            subscriptFunc: { self._comments[$0] }
+        )
     }
     
+    var descriptions: ToMany<PlaceDescription> {
+        return ToMany<PlaceDescription>(
+            countFunc: { return self._descriptions.count },
+            subscriptFunc: { self._descriptions[$0] }
+        )
+    }
+
+    var ratings: ToMany<PlaceRating> {
+        return ToMany<PlaceRating>(
+            countFunc: { return self._ratings.count },
+            subscriptFunc: { self._ratings[$0] }
+        )
+    }
+
+    var waitings: ToMany<PlaceWaiting> {
+        return ToMany<PlaceWaiting>(
+            countFunc: { return self._waitings.count },
+            subscriptFunc: { self._waitings[$0] }
+        )
+    }
+
     var place: Place { return _place }
 }
 

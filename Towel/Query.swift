@@ -22,8 +22,8 @@ class Query {
         return try! Realm(configuration: config)
     }
     
-    static func getAllPlaces() -> AnyGenerator<Place> {
-        let gtor = realm().objects(DBPlace).generate()
-        return AnyGenerator { return gtor.next() }
+    static func getAllPlaces() -> ToMany<Place> {
+        let results = realm().objects(DBPlace)
+        return ToMany<Place>(countFunc: { return results.count }, subscriptFunc: { results[$0] })
     }
 }

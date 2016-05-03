@@ -13,10 +13,10 @@ protocol PlaceInfo {
     var altitude: Double? { get }
     
     var location: Location? { get }
-    var comments: AnyGenerator<PlaceComment> { get }
-    var descriptions: AnyGenerator<PlaceDescription> { get }
-    var ratings: AnyGenerator<PlaceRating> { get }
-    var waitings: AnyGenerator<PlaceWaiting> { get }
+    var comments: ToMany<PlaceComment> { get }
+    var descriptions: ToMany<PlaceDescription> { get }
+    var ratings: ToMany<PlaceRating> { get }
+    var waitings: ToMany<PlaceWaiting> { get }
     
     var place: Place { get }
 }
