@@ -9,7 +9,7 @@
 import MapKit
 
 class PlacePinView: MKAnnotationView {
-    static let _pinImageNames: [PlaceRating: String] = [
+    static let _pinImageNames: [Rating: String] = [
         .Excellent: "pin_exc",
         .Good: "pin_good",
         .Average: "pin_avg",
@@ -17,7 +17,7 @@ class PlacePinView: MKAnnotationView {
         .Bad: "pin_bad"
     ]
     
-    static let _pinImages: [PlaceRating: UIImage] = PlacePinView._pinImageNames
+    static let _pinImages: [Rating: UIImage] = PlacePinView._pinImageNames
         .fmap { UIImage(named: $0)! }
     
     override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
@@ -36,14 +36,17 @@ class PlacePinView: MKAnnotationView {
     }
 
     func configure(place: Place) {
-        let rating = PlaceRating.fromValue(place.avgRating)
-        image = PlacePinView._pinImages[rating]!
+        if let avg = place.avgRating {
+            let rating = Rating.fromValue(avg)
+            image = PlacePinView._pinImages[rating]!
+        } else {
+            image = UIImage(named: "pin_unknown")
+        }
     }
     
     static func titleForPlace(place: Place) -> String {
-        let rating = PlaceRating.fromValue(place.avgRating)
-        let title = "\u{1F44D}\u{1F3FC} " + rating.toString() +
-            "   \u{1F553} " + (place.avgWaiting?.toString() ?? "N/A")
+        let rating = place.avgRating != nil ? Rating.fromValue(place.avgRating!).toString() : "N/A"
+        let title = "\u{1F44D}\u{1F3FC} " + rating + "   \u{1F553} " + (place.avgWaiting?.toString() ?? "N/A")
         return title
     }
 }
