@@ -21,11 +21,23 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="O7A-TY-bwm">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OpenStreetMap" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGJ-v4-PLG">
+                                <rect key="frame" x="520" y="586" width="80" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Mjx-pb-biC"/>
+                                    <constraint firstAttribute="height" constant="14" id="aWW-6m-22J"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="m3n-q2-eqD" firstAttribute="top" secondItem="cGJ-v4-PLG" secondAttribute="bottom" id="Xwn-oy-795"/>
                             <constraint firstAttribute="trailing" secondItem="O7A-TY-bwm" secondAttribute="trailing" id="acy-CI-t9Z"/>
                             <constraint firstItem="O7A-TY-bwm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iPp-NX-4A5"/>
+                            <constraint firstAttribute="trailing" secondItem="cGJ-v4-PLG" secondAttribute="trailing" id="ryT-7H-5px"/>
                             <constraint firstItem="O7A-TY-bwm" firstAttribute="bottom" secondItem="m3n-q2-eqD" secondAttribute="top" id="tsO-Qj-rMo"/>
                             <constraint firstItem="O7A-TY-bwm" firstAttribute="top" secondItem="gvu-g9-f8S" secondAttribute="bottom" constant="-20" id="uOb-eQ-nXY"/>
                         </constraints>

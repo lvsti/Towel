@@ -36,8 +36,15 @@ class MapViewController: UIViewController, MKMapViewDelegate, FBClusteringManage
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let osmTiles = OSMTileOverlay()
+        mapView.addOverlay(osmTiles, level: .AboveLabels)
+        
+        // hide "Legal" button as we are not using Apple Maps data at all
+        mapView.layoutMargins = UIEdgeInsets(top: 0, left: -50, bottom: 0, right: 0)
         
         mapView.delegate = self
+        
         loadPlaces()        
     }
     

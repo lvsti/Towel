@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E8114C471CDF672500FCF8B2 /* PlaceInfoCommentsTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8114C461CDF672500FCF8B2 /* PlaceInfoCommentsTitleCell.swift */; };
+		E8114C491CDF7D3E00FCF8B2 /* OSMTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8114C481CDF7D3E00FCF8B2 /* OSMTileOverlay.swift */; };
 		E8240DC81CD002DF00535CE1 /* DBLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8240DC71CD002DF00535CE1 /* DBLocation.swift */; };
 		E8240DCA1CD0030500535CE1 /* DBPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8240DC91CD0030500535CE1 /* DBPlace.swift */; };
 		E8240DCC1CD003F200535CE1 /* DBPlaceComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8240DCB1CD003F200535CE1 /* DBPlaceComment.swift */; };
@@ -105,6 +106,7 @@
 
 /* Begin PBXFileReference section */
 		E8114C461CDF672500FCF8B2 /* PlaceInfoCommentsTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceInfoCommentsTitleCell.swift; sourceTree = "<group>"; };
+		E8114C481CDF7D3E00FCF8B2 /* OSMTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSMTileOverlay.swift; sourceTree = "<group>"; };
 		E8240DC71CD002DF00535CE1 /* DBLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBLocation.swift; sourceTree = "<group>"; };
 		E8240DC91CD0030500535CE1 /* DBPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBPlace.swift; sourceTree = "<group>"; };
 		E8240DCB1CD003F200535CE1 /* DBPlaceComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBPlaceComment.swift; sourceTree = "<group>"; };
@@ -259,8 +261,9 @@
 				E8A163AC1CA845300042072C /* LaunchScreen.storyboard */,
 				E8A163A41CA845300042072C /* Main.storyboard */,
 				E8A163A21CA845300042072C /* MapViewController.swift */,
-				E88DCA911CC4006C002BF26B /* RatingExt.swift */,
+				E8114C481CDF7D3E00FCF8B2 /* OSMTileOverlay.swift */,
 				E82506681CBC4FAF00458ED4 /* Query.swift */,
+				E88DCA911CC4006C002BF26B /* RatingExt.swift */,
 				E8FC3ED01CBC554300B0549E /* Towel.realm */,
 				E88DCA931CC40360002BF26B /* WaitingTime.swift */,
 			);
@@ -457,6 +460,7 @@
 				E82506651CBC4F9D00458ED4 /* PlaceDescription.swift in Sources */,
 				E82E90121CDBF1710072DD35 /* PlaceInfoStatsCell.swift in Sources */,
 				E8D1DB011CB985F400825C89 /* PlaceInfoViewController.swift in Sources */,
+				E8114C491CDF7D3E00FCF8B2 /* OSMTileOverlay.swift in Sources */,
 				E82506641CBC4F9D00458ED4 /* PlaceComment.swift in Sources */,
 				E8CE3D1B1CD801B40066BC53 /* ToMany.swift in Sources */,
 				E8240DE21CD00C3C00535CE1 /* DBPlaceWaiting.swift in Sources */,
