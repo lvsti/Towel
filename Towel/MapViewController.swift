@@ -49,6 +49,23 @@ class MapViewController: UIViewController, MKMapViewDelegate, FBClusteringManage
         _clusteringManager.setAnnotations(places)
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        guard
+            segue.identifier == "showPlaceInfo",
+            let infoVC = segue.destinationViewController as? PlaceInfoViewController ??
+                (segue.destinationViewController as? UINavigationController)?.topViewController as? PlaceInfoViewController,
+            let annotation = (sender as? MKAnnotationView)?.annotation as? PlaceAnnotation
+        else {
+            return
+        }
+        
+        infoVC.place = annotation.place
+    }
+    
+    @IBAction func unwindPlaceInfo(unwindSegue: UIStoryboardSegue) {
+        
+    }
+
     // MARK: - MKMapViewDelegate
     
     func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
@@ -80,13 +97,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, FBClusteringManage
     }
     
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        guard let annotation = view.annotation as? PlaceAnnotation else {
-            return
-        }
-        
-        let infoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("placeInfo") as! PlaceInfoViewController
-        infoVC.place = annotation.place
-        navigationController?.pushViewController(infoVC, animated: true)
+        performSegueWithIdentifier("showPlaceInfo", sender: view)
     }
     
 }
