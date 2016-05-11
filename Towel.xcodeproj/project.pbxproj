@@ -64,6 +64,7 @@
 		E8CE3D1C1CD801B40066BC53 /* ToMany.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE3D1A1CD801B40066BC53 /* ToMany.swift */; };
 		E8D1DB011CB985F400825C89 /* PlaceInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D1DAFF1CB985F400825C89 /* PlaceInfoViewController.swift */; };
 		E8D25B921CE2724200BB4962 /* TileMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D25B911CE2724200BB4962 /* TileMapper.swift */; };
+		E8D25B961CE3CC9200BB4962 /* IO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D25B951CE3CC9200BB4962 /* IO.swift */; };
 		E8D823FF1CC3901100046572 /* FBAnnotationClustering.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D823FE1CC3901100046572 /* FBAnnotationClustering.framework */; };
 		E8D824001CC3939400046572 /* FBAnnotationClustering.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E8D823FE1CC3901100046572 /* FBAnnotationClustering.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E8D824021CC3A24500046572 /* ClusterPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D824011CC3A24500046572 /* ClusterPinView.swift */; };
@@ -150,6 +151,7 @@
 		E8CE3D1A1CD801B40066BC53 /* ToMany.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToMany.swift; sourceTree = "<group>"; };
 		E8D1DAFF1CB985F400825C89 /* PlaceInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceInfoViewController.swift; sourceTree = "<group>"; };
 		E8D25B911CE2724200BB4962 /* TileMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileMapper.swift; sourceTree = "<group>"; };
+		E8D25B951CE3CC9200BB4962 /* IO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IO.swift; sourceTree = "<group>"; };
 		E8D823FD1CC38F2300046572 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		E8D823FE1CC3901100046572 /* FBAnnotationClustering.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBAnnotationClustering.framework; path = Carthage/Build/iOS/FBAnnotationClustering.framework; sourceTree = "<group>"; };
 		E8D824011CC3A24500046572 /* ClusterPinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClusterPinView.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 				E8A163A41CA845300042072C /* Main.storyboard */,
 				E8A163A21CA845300042072C /* MapViewController.swift */,
 				E8114C481CDF7D3E00FCF8B2 /* OSMTileOverlay.swift */,
+				E8D25B951CE3CC9200BB4962 /* IO.swift */,
 				E82506681CBC4FAF00458ED4 /* Query.swift */,
 				E88DCA911CC4006C002BF26B /* RatingExt.swift */,
 				E8D25B911CE2724200BB4962 /* TileMapper.swift */,
@@ -455,6 +458,7 @@
 				E8240DD71CD004BD00535CE1 /* DBPlaceInfo.swift in Sources */,
 				E8240DE31CD00C4100535CE1 /* PlaceRating.swift in Sources */,
 				E8240DD31CD004BD00535CE1 /* DBLocation.swift in Sources */,
+				E8D25B961CE3CC9200BB4962 /* IO.swift in Sources */,
 				E8240DD61CD004BD00535CE1 /* DBPlaceDescription.swift in Sources */,
 				E8D824021CC3A24500046572 /* ClusterPinView.swift in Sources */,
 				E88DCA921CC4006C002BF26B /* RatingExt.swift in Sources */,
