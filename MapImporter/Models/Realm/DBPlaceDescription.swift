@@ -14,14 +14,12 @@ class DBPlaceDescription: Object {
     dynamic var _text: String = ""
     dynamic var _timestamp: NSDate?
     
-    var _placeInfo: DBPlaceInfo {
-        return linkingObjects(DBPlaceInfo.self, forProperty: "_descriptions").first!
-    }
+    let _placeInfo = LinkingObjects(fromType: DBPlaceInfo.self, property: "_descriptions")
 }
 
 extension DBPlaceDescription: PlaceDescription {
     var languageID: String { return _languageID }
     var text: String { return _text }
     var timestamp: NSDate? { return _timestamp }
-    var placeInfo: PlaceInfo { return _placeInfo }
+    var placeInfo: PlaceInfo { return _placeInfo.first! }
 }

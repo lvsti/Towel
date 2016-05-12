@@ -13,7 +13,7 @@ class Query {
     
     static let config: Realm.Configuration = {
         var config = Realm.Configuration()
-        config.path = NSBundle.mainBundle().URLForResource("Towel", withExtension: "realm")!.path
+        config.fileURL = NSBundle.mainBundle().URLForResource("Towel", withExtension: "realm")
         config.readOnly = true
         return config
     }()

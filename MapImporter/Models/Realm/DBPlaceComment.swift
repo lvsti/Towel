@@ -13,13 +13,11 @@ class DBPlaceComment: Object {
     dynamic var _text: String = ""
     dynamic var _timestamp = NSDate()
     
-    var _placeInfo: DBPlaceInfo {
-        return linkingObjects(DBPlaceInfo.self, forProperty: "_comments").first!
-    }
+    let _placeInfo = LinkingObjects(fromType: DBPlaceInfo.self, property: "_comments")
 }
 
 extension DBPlaceComment: PlaceComment {
     var text: String { return _text }
     var timestamp: NSDate { return _timestamp }
-    var placeInfo: PlaceInfo { return _placeInfo }
+    var placeInfo: PlaceInfo { return _placeInfo.first! }
 }

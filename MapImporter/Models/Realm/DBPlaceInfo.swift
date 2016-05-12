@@ -19,9 +19,7 @@ class DBPlaceInfo: Object {
     let _ratings = List<DBPlaceRating>()
     let _waitings = List<DBPlaceWaiting>()
 
-    var _place: DBPlace {
-        return linkingObjects(DBPlace.self, forProperty: "_placeInfo").first!
-    }
+    let _place = LinkingObjects(fromType: DBPlace.self, property: "_placeInfo")
 }
 
 extension DBPlaceInfo: PlaceInfo {
@@ -58,6 +56,6 @@ extension DBPlaceInfo: PlaceInfo {
         )
     }
 
-    var place: Place { return _place }
+    var place: Place { return _place.first! }
 }
 
