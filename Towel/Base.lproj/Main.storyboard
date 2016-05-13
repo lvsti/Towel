@@ -1,11 +1,80 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7Jt-cz-JHm">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Reveal View Controller-->
+        <scene sceneID="Vxl-8a-LWB">
+            <objects>
+                <viewController id="7Jt-cz-JHm" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="96w-xu-tZT"/>
+                        <viewControllerLayoutGuide type="bottom" id="SXo-wa-UO8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rtr-mE-lF2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="rearViewRevealWidth">
+                            <integer key="value" value="200"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="91s-yv-q01"/>
+                        <segue destination="L19-cE-OQw" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="Nda-wt-2t4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ou5-wY-g8e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1080" y="-1506"/>
+        </scene>
+        <!--Sidebar View Controller-->
+        <scene sceneID="Gd8-4s-8Mf">
+            <objects>
+                <viewController id="L19-cE-OQw" customClass="SidebarViewController" customModule="Towel" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zwc-5K-20C"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fiw-f2-HD7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dvV-OO-1Tc">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIm-xe-2L9">
+                                <rect key="frame" x="20" y="20" width="160" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Map">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u02-i1-LvA">
+                                <rect key="frame" x="20" y="64" width="160" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Trips">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coming soon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2IE-WE-2Z4">
+                                <rect key="frame" x="20" y="91" width="160" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="200" height="600"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sdz-9Y-Ja3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1080" y="-759"/>
+        </scene>
         <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -21,24 +90,35 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="O7A-TY-bwm">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDC-hf-TTA">
+                                <rect key="frame" x="10" y="10" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="cI1-4Y-bYE"/>
+                                    <constraint firstAttribute="width" constant="44" id="xyC-eH-S4e"/>
+                                </constraints>
+                                <state key="normal" image="menu"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="O7A-TY-bwm" secondAttribute="trailing" id="acy-CI-t9Z"/>
                             <constraint firstItem="O7A-TY-bwm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iPp-NX-4A5"/>
+                            <constraint firstItem="xDC-hf-TTA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-10" id="jGr-jx-4OP"/>
                             <constraint firstItem="O7A-TY-bwm" firstAttribute="bottom" secondItem="m3n-q2-eqD" secondAttribute="top" id="tsO-Qj-rMo"/>
+                            <constraint firstItem="xDC-hf-TTA" firstAttribute="top" secondItem="gvu-g9-f8S" secondAttribute="bottom" constant="-10" id="u83-Sr-SJZ"/>
                             <constraint firstItem="O7A-TY-bwm" firstAttribute="top" secondItem="gvu-g9-f8S" secondAttribute="bottom" constant="-20" id="uOb-eQ-nXY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="edi-vS-LjQ"/>
                     <connections>
                         <outlet property="mapView" destination="O7A-TY-bwm" id="Ujk-fU-58W"/>
+                        <outlet property="menuButton" destination="xDC-hf-TTA" id="McD-uD-12f"/>
                         <segue destination="sGp-Cj-X8j" kind="presentation" identifier="showPlaceInfo" id="omf-li-FQY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="116" y="-700"/>
+            <point key="canvasLocation" x="-286" y="-1506"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Aak-Gw-vek">
@@ -324,7 +404,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yh2-2q-iYk" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="l66-iu-9vQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="804" y="-700"/>
+            <point key="canvasLocation" x="565" y="-700"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menu" width="24" height="24"/>
+    </resources>
 </document>

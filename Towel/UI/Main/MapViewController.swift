@@ -26,6 +26,7 @@ class PlaceAnnotation: NSObject, MKAnnotation {
 
 class MapViewController: UIViewController, MKMapViewDelegate, FBClusteringManagerDelegate {
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var menuButton: UIButton!
     
     private let _clusteringManager: FBClusteringManager
     private let _tileOverlay: OSMTileOverlay
@@ -41,8 +42,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, FBClusteringManage
 
         mapView.showOSMAttribution()
         mapView.addOverlay(_tileOverlay, level: .AboveLabels)
-        
         mapView.delegate = self
+        
+        if let rvc = revealViewController() {
+            menuButton.addTarget(rvc,
+                                 action: #selector(SWRevealViewController.revealToggle),
+                                 forControlEvents: .TouchUpInside)
+        }
         
         loadPlaces()        
     }
