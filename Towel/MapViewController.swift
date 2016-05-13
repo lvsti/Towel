@@ -28,20 +28,19 @@ class MapViewController: UIViewController, MKMapViewDelegate, FBClusteringManage
     @IBOutlet weak var mapView: MKMapView!
     
     private let _clusteringManager: FBClusteringManager
+    private let _tileOverlay: OSMTileOverlay
     
     required init?(coder aDecoder: NSCoder) {
         _clusteringManager = FBClusteringManager(annotations: [])
+        _tileOverlay = OSMTileOverlay()
         super.init(coder: aDecoder)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let osmTiles = OSMTileOverlay()
-        mapView.addOverlay(osmTiles, level: .AboveLabels)
-        
-        // hide "Legal" button as we are not using Apple Maps data at all
-        mapView.layoutMargins = UIEdgeInsets(top: 0, left: -50, bottom: 0, right: 0)
+        mapView.showOSMAttribution()
+        mapView.addOverlay(_tileOverlay, level: .AboveLabels)
         
         mapView.delegate = self
         
@@ -67,6 +66,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, FBClusteringManage
         }
         
         infoVC.place = annotation.place
+        infoVC.mapOverlay = _tileOverlay
+        infoVC.mapSpan = MKCoordinateSpan(latitudeDelta: 0,
+                                          longitudeDelta: mapView.region.span.longitudeDelta)
     }
     
     @IBAction func unwindPlaceInfo(unwindSegue: UIStoryboardSegue) {
