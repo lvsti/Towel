@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E8114C471CDF672500FCF8B2 /* PlaceInfoCommentsTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8114C461CDF672500FCF8B2 /* PlaceInfoCommentsTitleCell.swift */; };
 		E8114C491CDF7D3E00FCF8B2 /* OSMTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8114C481CDF7D3E00FCF8B2 /* OSMTileOverlay.swift */; };
 		E8240DC81CD002DF00535CE1 /* DBLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8240DC71CD002DF00535CE1 /* DBLocation.swift */; };
 		E8240DCA1CD0030500535CE1 /* DBPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8240DC91CD0030500535CE1 /* DBPlace.swift */; };
@@ -43,16 +42,10 @@
 		E82506691CBC4FAF00458ED4 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82506681CBC4FAF00458ED4 /* Query.swift */; };
 		E828B63B1CB9984900D1A204 /* PlacePinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E828B63A1CB9984900D1A204 /* PlacePinView.swift */; };
 		E828B63D1CB99F2800D1A204 /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = E828B63C1CB99F2800D1A204 /* Functional.swift */; };
-		E82E90101CDBE6600072DD35 /* PlaceInfoTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E900F1CDBE6600072DD35 /* PlaceInfoTitleCell.swift */; };
-		E82E90121CDBF1710072DD35 /* PlaceInfoStatsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E90111CDBF1710072DD35 /* PlaceInfoStatsCell.swift */; };
 		E83F64931CC3DD4A009142A9 /* EmojiFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83F64921CC3DD4A009142A9 /* EmojiFlags.swift */; };
-		E856FA6D1CE524A700CC3B6B /* PlaceInfoMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E856FA6C1CE524A700CC3B6B /* PlaceInfoMapCell.swift */; };
 		E88DCA921CC4006C002BF26B /* RatingExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88DCA911CC4006C002BF26B /* RatingExt.swift */; };
 		E88DCA941CC40360002BF26B /* WaitingTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88DCA931CC40360002BF26B /* WaitingTime.swift */; };
-		E895CE4B1CDF3812000CD4E6 /* PlaceInfoDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E895CE4A1CDF3812000CD4E6 /* PlaceInfoDescriptionCell.swift */; };
-		E895CE4D1CDF38A5000CD4E6 /* PlaceInfoCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E895CE4C1CDF38A5000CD4E6 /* PlaceInfoCommentCell.swift */; };
 		E8A163A11CA845300042072C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A163A01CA845300042072C /* AppDelegate.swift */; };
-		E8A163A31CA845300042072C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A163A21CA845300042072C /* MapViewController.swift */; };
 		E8A163A61CA845300042072C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8A163A41CA845300042072C /* Main.storyboard */; };
 		E8A163AB1CA845300042072C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8A163AA1CA845300042072C /* Assets.xcassets */; };
 		E8A163AE1CA845300042072C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8A163AC1CA845300042072C /* LaunchScreen.storyboard */; };
@@ -63,11 +56,18 @@
 		E8A163C91CA86D630042072C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8A163C71CA86D630042072C /* LaunchScreen.storyboard */; };
 		E8CE3D1B1CD801B40066BC53 /* ToMany.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE3D1A1CD801B40066BC53 /* ToMany.swift */; };
 		E8CE3D1C1CD801B40066BC53 /* ToMany.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE3D1A1CD801B40066BC53 /* ToMany.swift */; };
-		E8D1DB011CB985F400825C89 /* PlaceInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D1DAFF1CB985F400825C89 /* PlaceInfoViewController.swift */; };
 		E8D25B921CE2724200BB4962 /* TileMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D25B911CE2724200BB4962 /* TileMapper.swift */; };
 		E8D25B941CE3B14300BB4962 /* TileCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D25B931CE3B14300BB4962 /* TileCache.swift */; };
 		E8D25B961CE3CC9200BB4962 /* IO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D25B951CE3CC9200BB4962 /* IO.swift */; };
-		E8D5ABE91CE66CA600F5C313 /* MapView+OSM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5ABE81CE66CA600F5C313 /* MapView+OSM.swift */; };
+		E8D5ABF21CE677BC00F5C313 /* PlaceInfoCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5ABEB1CE677BC00F5C313 /* PlaceInfoCommentCell.swift */; };
+		E8D5ABF31CE677BC00F5C313 /* PlaceInfoCommentsTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5ABEC1CE677BC00F5C313 /* PlaceInfoCommentsTitleCell.swift */; };
+		E8D5ABF41CE677BC00F5C313 /* PlaceInfoDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5ABED1CE677BC00F5C313 /* PlaceInfoDescriptionCell.swift */; };
+		E8D5ABF51CE677BC00F5C313 /* PlaceInfoMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5ABEE1CE677BC00F5C313 /* PlaceInfoMapCell.swift */; };
+		E8D5ABF61CE677BC00F5C313 /* PlaceInfoStatsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5ABEF1CE677BC00F5C313 /* PlaceInfoStatsCell.swift */; };
+		E8D5ABF71CE677BC00F5C313 /* PlaceInfoTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5ABF01CE677BC00F5C313 /* PlaceInfoTitleCell.swift */; };
+		E8D5ABF81CE677BC00F5C313 /* PlaceInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5ABF11CE677BC00F5C313 /* PlaceInfoViewController.swift */; };
+		E8D5ABFB1CE678A400F5C313 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5ABFA1CE678A400F5C313 /* MapViewController.swift */; };
+		E8D5ABFD1CE678B400F5C313 /* MapView+OSM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5ABFC1CE678B400F5C313 /* MapView+OSM.swift */; };
 		E8D823FF1CC3901100046572 /* FBAnnotationClustering.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D823FE1CC3901100046572 /* FBAnnotationClustering.framework */; };
 		E8D824001CC3939400046572 /* FBAnnotationClustering.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E8D823FE1CC3901100046572 /* FBAnnotationClustering.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E8D824021CC3A24500046572 /* ClusterPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D824011CC3A24500046572 /* ClusterPinView.swift */; };
@@ -110,7 +110,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E8114C461CDF672500FCF8B2 /* PlaceInfoCommentsTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceInfoCommentsTitleCell.swift; sourceTree = "<group>"; };
 		E8114C481CDF7D3E00FCF8B2 /* OSMTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSMTileOverlay.swift; sourceTree = "<group>"; };
 		E8240DC71CD002DF00535CE1 /* DBLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBLocation.swift; sourceTree = "<group>"; };
 		E8240DC91CD0030500535CE1 /* DBPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBPlace.swift; sourceTree = "<group>"; };
@@ -130,17 +129,11 @@
 		E82506681CBC4FAF00458ED4 /* Query.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
 		E828B63A1CB9984900D1A204 /* PlacePinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacePinView.swift; sourceTree = "<group>"; };
 		E828B63C1CB99F2800D1A204 /* Functional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functional.swift; sourceTree = "<group>"; };
-		E82E900F1CDBE6600072DD35 /* PlaceInfoTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceInfoTitleCell.swift; sourceTree = "<group>"; };
-		E82E90111CDBF1710072DD35 /* PlaceInfoStatsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceInfoStatsCell.swift; sourceTree = "<group>"; };
 		E83F64921CC3DD4A009142A9 /* EmojiFlags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiFlags.swift; sourceTree = "<group>"; };
-		E856FA6C1CE524A700CC3B6B /* PlaceInfoMapCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceInfoMapCell.swift; sourceTree = "<group>"; };
 		E88DCA911CC4006C002BF26B /* RatingExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingExt.swift; sourceTree = "<group>"; };
 		E88DCA931CC40360002BF26B /* WaitingTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitingTime.swift; sourceTree = "<group>"; };
-		E895CE4A1CDF3812000CD4E6 /* PlaceInfoDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceInfoDescriptionCell.swift; sourceTree = "<group>"; };
-		E895CE4C1CDF38A5000CD4E6 /* PlaceInfoCommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceInfoCommentCell.swift; sourceTree = "<group>"; };
 		E8A1639D1CA845300042072C /* Towel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Towel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8A163A01CA845300042072C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E8A163A21CA845300042072C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		E8A163A51CA845300042072C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E8A163AA1CA845300042072C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8A163AD1CA845300042072C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -153,11 +146,18 @@
 		E8A163C81CA86D630042072C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8A163CA1CA86D630042072C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8CE3D1A1CD801B40066BC53 /* ToMany.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToMany.swift; sourceTree = "<group>"; };
-		E8D1DAFF1CB985F400825C89 /* PlaceInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceInfoViewController.swift; sourceTree = "<group>"; };
 		E8D25B911CE2724200BB4962 /* TileMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileMapper.swift; sourceTree = "<group>"; };
 		E8D25B931CE3B14300BB4962 /* TileCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileCache.swift; sourceTree = "<group>"; };
 		E8D25B951CE3CC9200BB4962 /* IO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IO.swift; sourceTree = "<group>"; };
-		E8D5ABE81CE66CA600F5C313 /* MapView+OSM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MapView+OSM.swift"; sourceTree = "<group>"; };
+		E8D5ABEB1CE677BC00F5C313 /* PlaceInfoCommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceInfoCommentCell.swift; sourceTree = "<group>"; };
+		E8D5ABEC1CE677BC00F5C313 /* PlaceInfoCommentsTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceInfoCommentsTitleCell.swift; sourceTree = "<group>"; };
+		E8D5ABED1CE677BC00F5C313 /* PlaceInfoDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceInfoDescriptionCell.swift; sourceTree = "<group>"; };
+		E8D5ABEE1CE677BC00F5C313 /* PlaceInfoMapCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceInfoMapCell.swift; sourceTree = "<group>"; };
+		E8D5ABEF1CE677BC00F5C313 /* PlaceInfoStatsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceInfoStatsCell.swift; sourceTree = "<group>"; };
+		E8D5ABF01CE677BC00F5C313 /* PlaceInfoTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceInfoTitleCell.swift; sourceTree = "<group>"; };
+		E8D5ABF11CE677BC00F5C313 /* PlaceInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceInfoViewController.swift; sourceTree = "<group>"; };
+		E8D5ABFA1CE678A400F5C313 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		E8D5ABFC1CE678B400F5C313 /* MapView+OSM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MapView+OSM.swift"; sourceTree = "<group>"; };
 		E8D823FD1CC38F2300046572 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		E8D823FE1CC3901100046572 /* FBAnnotationClustering.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBAnnotationClustering.framework; path = Carthage/Build/iOS/FBAnnotationClustering.framework; sourceTree = "<group>"; };
 		E8D824011CC3A24500046572 /* ClusterPinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClusterPinView.swift; sourceTree = "<group>"; };
@@ -270,8 +270,6 @@
 				E8A163AF1CA845300042072C /* Info.plist */,
 				E8A163AC1CA845300042072C /* LaunchScreen.storyboard */,
 				E8A163A41CA845300042072C /* Main.storyboard */,
-				E8A163A21CA845300042072C /* MapViewController.swift */,
-				E8D5ABE81CE66CA600F5C313 /* MapView+OSM.swift */,
 				E8114C481CDF7D3E00FCF8B2 /* OSMTileOverlay.swift */,
 				E8D25B951CE3CC9200BB4962 /* IO.swift */,
 				E82506681CBC4FAF00458ED4 /* Query.swift */,
@@ -300,17 +298,35 @@
 		E8D1DAFE1CB985F400825C89 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E8D5ABF91CE678A400F5C313 /* Main */,
+				E8D5ABEA1CE6779C00F5C313 /* PlaceInfo */,
 				E8D824011CC3A24500046572 /* ClusterPinView.swift */,
-				E895CE4C1CDF38A5000CD4E6 /* PlaceInfoCommentCell.swift */,
-				E8114C461CDF672500FCF8B2 /* PlaceInfoCommentsTitleCell.swift */,
-				E895CE4A1CDF3812000CD4E6 /* PlaceInfoDescriptionCell.swift */,
-				E856FA6C1CE524A700CC3B6B /* PlaceInfoMapCell.swift */,
-				E82E90111CDBF1710072DD35 /* PlaceInfoStatsCell.swift */,
-				E82E900F1CDBE6600072DD35 /* PlaceInfoTitleCell.swift */,
-				E8D1DAFF1CB985F400825C89 /* PlaceInfoViewController.swift */,
+				E8D5ABFC1CE678B400F5C313 /* MapView+OSM.swift */,
 				E828B63A1CB9984900D1A204 /* PlacePinView.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		E8D5ABEA1CE6779C00F5C313 /* PlaceInfo */ = {
+			isa = PBXGroup;
+			children = (
+				E8D5ABEB1CE677BC00F5C313 /* PlaceInfoCommentCell.swift */,
+				E8D5ABEC1CE677BC00F5C313 /* PlaceInfoCommentsTitleCell.swift */,
+				E8D5ABED1CE677BC00F5C313 /* PlaceInfoDescriptionCell.swift */,
+				E8D5ABEE1CE677BC00F5C313 /* PlaceInfoMapCell.swift */,
+				E8D5ABEF1CE677BC00F5C313 /* PlaceInfoStatsCell.swift */,
+				E8D5ABF01CE677BC00F5C313 /* PlaceInfoTitleCell.swift */,
+				E8D5ABF11CE677BC00F5C313 /* PlaceInfoViewController.swift */,
+			);
+			path = PlaceInfo;
+			sourceTree = "<group>";
+		};
+		E8D5ABF91CE678A400F5C313 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E8D5ABFA1CE678A400F5C313 /* MapViewController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		E8E61E8C1CBAD8C100B2A741 /* MapImporter */ = {
@@ -464,38 +480,38 @@
 			files = (
 				E8240DE11CD00C3C00535CE1 /* DBPlaceRating.swift in Sources */,
 				E88DCA941CC40360002BF26B /* WaitingTime.swift in Sources */,
+				E8D5ABF51CE677BC00F5C313 /* PlaceInfoMapCell.swift in Sources */,
+				E8D5ABF81CE677BC00F5C313 /* PlaceInfoViewController.swift in Sources */,
 				E8240DD71CD004BD00535CE1 /* DBPlaceInfo.swift in Sources */,
 				E8240DE31CD00C4100535CE1 /* PlaceRating.swift in Sources */,
 				E8240DD31CD004BD00535CE1 /* DBLocation.swift in Sources */,
+				E8D5ABF21CE677BC00F5C313 /* PlaceInfoCommentCell.swift in Sources */,
 				E8D25B961CE3CC9200BB4962 /* IO.swift in Sources */,
+				E8D5ABF31CE677BC00F5C313 /* PlaceInfoCommentsTitleCell.swift in Sources */,
 				E8240DD61CD004BD00535CE1 /* DBPlaceDescription.swift in Sources */,
+				E8D5ABF61CE677BC00F5C313 /* PlaceInfoStatsCell.swift in Sources */,
 				E8D25B941CE3B14300BB4962 /* TileCache.swift in Sources */,
 				E8D824021CC3A24500046572 /* ClusterPinView.swift in Sources */,
+				E8D5ABFD1CE678B400F5C313 /* MapView+OSM.swift in Sources */,
 				E88DCA921CC4006C002BF26B /* RatingExt.swift in Sources */,
 				E83F64931CC3DD4A009142A9 /* EmojiFlags.swift in Sources */,
 				E828B63B1CB9984900D1A204 /* PlacePinView.swift in Sources */,
 				E82506651CBC4F9D00458ED4 /* PlaceDescription.swift in Sources */,
-				E82E90121CDBF1710072DD35 /* PlaceInfoStatsCell.swift in Sources */,
-				E8D5ABE91CE66CA600F5C313 /* MapView+OSM.swift in Sources */,
-				E8D1DB011CB985F400825C89 /* PlaceInfoViewController.swift in Sources */,
+				E8D5ABF71CE677BC00F5C313 /* PlaceInfoTitleCell.swift in Sources */,
+				E8D5ABF41CE677BC00F5C313 /* PlaceInfoDescriptionCell.swift in Sources */,
 				E8114C491CDF7D3E00FCF8B2 /* OSMTileOverlay.swift in Sources */,
 				E82506641CBC4F9D00458ED4 /* PlaceComment.swift in Sources */,
 				E8CE3D1B1CD801B40066BC53 /* ToMany.swift in Sources */,
 				E8240DE21CD00C3C00535CE1 /* DBPlaceWaiting.swift in Sources */,
 				E82506631CBC4F9D00458ED4 /* Place.swift in Sources */,
 				E8240DD41CD004BD00535CE1 /* DBPlace.swift in Sources */,
-				E8A163A31CA845300042072C /* MapViewController.swift in Sources */,
-				E8114C471CDF672500FCF8B2 /* PlaceInfoCommentsTitleCell.swift in Sources */,
 				E8D25B921CE2724200BB4962 /* TileMapper.swift in Sources */,
-				E82E90101CDBE6600072DD35 /* PlaceInfoTitleCell.swift in Sources */,
 				E82506691CBC4FAF00458ED4 /* Query.swift in Sources */,
 				E8240DE41CD00C4100535CE1 /* PlaceWaiting.swift in Sources */,
 				E828B63D1CB99F2800D1A204 /* Functional.swift in Sources */,
-				E895CE4B1CDF3812000CD4E6 /* PlaceInfoDescriptionCell.swift in Sources */,
+				E8D5ABFB1CE678A400F5C313 /* MapViewController.swift in Sources */,
 				E8240DD51CD004BD00535CE1 /* DBPlaceComment.swift in Sources */,
 				E8A163A11CA845300042072C /* AppDelegate.swift in Sources */,
-				E856FA6D1CE524A700CC3B6B /* PlaceInfoMapCell.swift in Sources */,
-				E895CE4D1CDF38A5000CD4E6 /* PlaceInfoCommentCell.swift in Sources */,
 				E82506621CBC4F9D00458ED4 /* Location.swift in Sources */,
 				E82506661CBC4F9D00458ED4 /* PlaceInfo.swift in Sources */,
 			);
