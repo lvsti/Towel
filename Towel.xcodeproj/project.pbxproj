@@ -54,6 +54,8 @@
 		E8A163C11CA86D630042072C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8A163BF1CA86D630042072C /* Main.storyboard */; };
 		E8A163C61CA86D630042072C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8A163C51CA86D630042072C /* Assets.xcassets */; };
 		E8A163C91CA86D630042072C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8A163C71CA86D630042072C /* LaunchScreen.storyboard */; };
+		E8BE9FA91CE8CC9E00DDD5C8 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8BE9FA81CE8CC9E00DDD5C8 /* Swinject.framework */; };
+		E8BE9FAA1CE8CCC100DDD5C8 /* Swinject.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E8BE9FA81CE8CC9E00DDD5C8 /* Swinject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E8CE3D1B1CD801B40066BC53 /* ToMany.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE3D1A1CD801B40066BC53 /* ToMany.swift */; };
 		E8CE3D1C1CD801B40066BC53 /* ToMany.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE3D1A1CD801B40066BC53 /* ToMany.swift */; };
 		E8D25B921CE2724200BB4962 /* TileMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D25B911CE2724200BB4962 /* TileMapper.swift */; };
@@ -106,6 +108,7 @@
 				E8D824001CC3939400046572 /* FBAnnotationClustering.framework in CopyFiles */,
 				E8FC3ED31CBC580200B0549E /* Realm.framework in CopyFiles */,
 				E8FC3ED41CBC580200B0549E /* RealmSwift.framework in CopyFiles */,
+				E8BE9FAA1CE8CCC100DDD5C8 /* Swinject.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +150,7 @@
 		E8A163C51CA86D630042072C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8A163C81CA86D630042072C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8A163CA1CA86D630042072C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8BE9FA81CE8CC9E00DDD5C8 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 		E8CE3D1A1CD801B40066BC53 /* ToMany.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToMany.swift; sourceTree = "<group>"; };
 		E8D25B911CE2724200BB4962 /* TileMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileMapper.swift; sourceTree = "<group>"; };
 		E8D25B931CE3B14300BB4962 /* TileCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileCache.swift; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 				E8D823FF1CC3901100046572 /* FBAnnotationClustering.framework in Frameworks */,
 				E8FC3ECE1CBC50EE00B0549E /* Realm.framework in Frameworks */,
 				E8FC3ECF1CBC50EE00B0549E /* RealmSwift.framework in Frameworks */,
+				E8BE9FA91CE8CC9E00DDD5C8 /* Swinject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +357,7 @@
 				E8FC3ECD1CBC50EE00B0549E /* RealmSwift.framework */,
 				E8E61E981CBAD94D00B2A741 /* Realm.framework */,
 				E8E61E991CBAD94E00B2A741 /* RealmSwift.framework */,
+				E8BE9FA81CE8CC9E00DDD5C8 /* Swinject.framework */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
