@@ -11,9 +11,9 @@ import RealmSwift
 
 struct ToMany<T>: CollectionType {
     private let _countFunc: () -> Int
-    private let _subscriptFunc: (Int) -> T?
+    private let _subscriptFunc: (Int) -> T
     
-    init(countFunc: () -> Int, subscriptFunc: (Int) -> T?) {
+    init(countFunc: () -> Int, subscriptFunc: (Int) -> T) {
         _countFunc = countFunc
         _subscriptFunc = subscriptFunc
     }
@@ -37,11 +37,11 @@ struct ToMany<T>: CollectionType {
     // MARK: - from CollectionType
     
     subscript (position: Int) -> T {
-        return _subscriptFunc(position)!
+        return _subscriptFunc(position)
     }
     
     var isEmpty: Bool { return count == 0 }
     var count: Int { return endIndex }
-    var first: T? { return _subscriptFunc(0) }
+    var first: T? { return count > 0 ? _subscriptFunc(0) : nil }
 }
 
