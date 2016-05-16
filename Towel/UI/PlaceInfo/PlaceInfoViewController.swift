@@ -84,7 +84,7 @@ class PlaceInfoViewController: UIViewController, UITableViewDataSource, UITableV
             
             cell.mapView.addOverlay(mapOverlay, level: .AboveLabels)
             let center = CLLocationCoordinate2D(latitude: place.latitude, longitude: place.longitude)
-            cell.mapView.region = MKCoordinateRegionMakeWithDistance(center, 1000, 1000)
+            cell.mapView.region = MKCoordinateRegionMakeWithDistance(center, 500, 500)
             
             cell.mapView.addAnnotation(PlaceAnnotation(place: place))
 
