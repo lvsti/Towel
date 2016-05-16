@@ -391,7 +391,12 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="#Place Info" id="N0W-E8-n5y">
-                        <barButtonItem key="rightBarButtonItem" title="#Close" id="3gp-7V-buy">
+                        <barButtonItem key="leftBarButtonItem" image="streetview" style="plain" id="hYX-JE-09V">
+                            <connections>
+                                <action selector="streetViewButtonTapped:" destination="XfK-eQ-qRR" id="PYl-3S-yf8"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="3gp-7V-buy">
                             <connections>
                                 <segue destination="l66-iu-9vQ" kind="unwind" unwindAction="unwindPlaceInfo:" id="WPk-I8-g19"/>
                             </connections>
@@ -409,5 +414,6 @@
     </scenes>
     <resources>
         <image name="menu" width="24" height="24"/>
+        <image name="streetview" width="28" height="28"/>
     </resources>
 </document>

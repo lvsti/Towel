@@ -65,6 +65,11 @@ class PlaceInfoViewController: UIViewController, UITableViewDataSource, UITableV
         return locStr
     }
     
+    @IBAction func streetViewButtonTapped(sender: AnyObject) {
+        let streetView = "https://maps.google.com/maps?q=&layer=c&cbll=\(place.latitude),\(place.longitude)"
+        UIApplication.sharedApplication().openURL(NSURL(string: streetView)!)
+    }
+    
     // MARK: - from UITableViewDataSource:
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
