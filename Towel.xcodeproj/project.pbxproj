@@ -43,6 +43,7 @@
 		E828B63B1CB9984900D1A204 /* PlacePinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E828B63A1CB9984900D1A204 /* PlacePinView.swift */; };
 		E828B63D1CB99F2800D1A204 /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = E828B63C1CB99F2800D1A204 /* Functional.swift */; };
 		E83F64931CC3DD4A009142A9 /* EmojiFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83F64921CC3DD4A009142A9 /* EmojiFlags.swift */; };
+		E856FA6B1CE5165600CC3B6B /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E8D25B991CE3DD6200BB4962 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E86F68791CE9FC9F00986588 /* TileSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86F68781CE9FC9F00986588 /* TileSource.swift */; };
 		E86F687B1CE9FDDD00986588 /* TileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86F687A1CE9FDDD00986588 /* TileStorage.swift */; };
 		E86F687D1CE9FDFB00986588 /* TaggingTileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86F687C1CE9FDFB00986588 /* TaggingTileStore.swift */; };
@@ -65,6 +66,8 @@
 		E8D25B921CE2724200BB4962 /* TileMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D25B911CE2724200BB4962 /* TileMapper.swift */; };
 		E8D25B941CE3B14300BB4962 /* PersistentTileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D25B931CE3B14300BB4962 /* PersistentTileStore.swift */; };
 		E8D25B961CE3CC9200BB4962 /* IO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D25B951CE3CC9200BB4962 /* IO.swift */; };
+		E8D25B981CE3D5B900BB4962 /* TileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D25B971CE3D5B900BB4962 /* TileManager.swift */; };
+		E8D25B9A1CE3DD6200BB4962 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D25B991CE3DD6200BB4962 /* Alamofire.framework */; };
 		E8D5ABF21CE677BC00F5C313 /* PlaceInfoCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5ABEB1CE677BC00F5C313 /* PlaceInfoCommentCell.swift */; };
 		E8D5ABF31CE677BC00F5C313 /* PlaceInfoCommentsTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5ABEC1CE677BC00F5C313 /* PlaceInfoCommentsTitleCell.swift */; };
 		E8D5ABF41CE677BC00F5C313 /* PlaceInfoDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5ABED1CE677BC00F5C313 /* PlaceInfoDescriptionCell.swift */; };
@@ -109,6 +112,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				E856FA6B1CE5165600CC3B6B /* Alamofire.framework in CopyFiles */,
 				E8D824001CC3939400046572 /* FBAnnotationClustering.framework in CopyFiles */,
 				E8FC3ED31CBC580200B0549E /* Realm.framework in CopyFiles */,
 				E8FC3ED41CBC580200B0549E /* RealmSwift.framework in CopyFiles */,
@@ -163,6 +167,8 @@
 		E8D25B911CE2724200BB4962 /* TileMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileMapper.swift; sourceTree = "<group>"; };
 		E8D25B931CE3B14300BB4962 /* PersistentTileStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentTileStore.swift; sourceTree = "<group>"; };
 		E8D25B951CE3CC9200BB4962 /* IO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IO.swift; sourceTree = "<group>"; };
+		E8D25B971CE3D5B900BB4962 /* TileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileManager.swift; sourceTree = "<group>"; };
+		E8D25B991CE3DD6200BB4962 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		E8D5ABEB1CE677BC00F5C313 /* PlaceInfoCommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceInfoCommentCell.swift; sourceTree = "<group>"; };
 		E8D5ABEC1CE677BC00F5C313 /* PlaceInfoCommentsTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceInfoCommentsTitleCell.swift; sourceTree = "<group>"; };
 		E8D5ABED1CE677BC00F5C313 /* PlaceInfoDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceInfoDescriptionCell.swift; sourceTree = "<group>"; };
@@ -200,6 +206,7 @@
 				E8FC3ECE1CBC50EE00B0549E /* Realm.framework in Frameworks */,
 				E8FC3ECF1CBC50EE00B0549E /* RealmSwift.framework in Frameworks */,
 				E8BE9FA91CE8CC9E00DDD5C8 /* Swinject.framework in Frameworks */,
+				E8D25B9A1CE3DD6200BB4962 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,12 +294,13 @@
 				E8A163A41CA845300042072C /* Main.storyboard */,
 				E8114C481CDF7D3E00FCF8B2 /* OSMTileOverlay.swift */,
 				E8D25B951CE3CC9200BB4962 /* IO.swift */,
+				E8D25B931CE3B14300BB4962 /* PersistentTileStore.swift */,
 				E82506681CBC4FAF00458ED4 /* Query.swift */,
 				E88DCA911CC4006C002BF26B /* RatingExt.swift */,
-				E8D25B931CE3B14300BB4962 /* PersistentTileStore.swift */,
 				E86F687C1CE9FDFB00986588 /* TaggingTileStore.swift */,
 				E86F687A1CE9FDDD00986588 /* TileStorage.swift */,
 				E86F68781CE9FC9F00986588 /* TileSource.swift */,
+				E8D25B971CE3D5B900BB4962 /* TileManager.swift */,
 				E8D25B911CE2724200BB4962 /* TileMapper.swift */,
 				E8FC3ED01CBC554300B0549E /* Towel.realm */,
 				E88DCA931CC40360002BF26B /* WaitingTime.swift */,
@@ -364,6 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				E8D5AC001CE683B700F5C313 /* SWRevealViewController */,
+				E8D25B991CE3DD6200BB4962 /* Alamofire.framework */,
 				E8D823FE1CC3901100046572 /* FBAnnotationClustering.framework */,
 				E8FC3ECC1CBC50EE00B0549E /* Realm.framework */,
 				E8FC3ECD1CBC50EE00B0549E /* RealmSwift.framework */,
@@ -533,6 +542,7 @@
 				E8D5ABF21CE677BC00F5C313 /* PlaceInfoCommentCell.swift in Sources */,
 				E8D25B961CE3CC9200BB4962 /* IO.swift in Sources */,
 				E8D5ABFF1CE67D9900F5C313 /* SidebarViewController.swift in Sources */,
+				E8D25B981CE3D5B900BB4962 /* TileManager.swift in Sources */,
 				E8D5ABF31CE677BC00F5C313 /* PlaceInfoCommentsTitleCell.swift in Sources */,
 				E8240DD61CD004BD00535CE1 /* DBPlaceDescription.swift in Sources */,
 				E8D5ABF61CE677BC00F5C313 /* PlaceInfoStatsCell.swift in Sources */,

@@ -1,4 +1,5 @@
-github "realm/realm-cocoa"
+github "realm/realm-cocoa" == 0.102.0
 github "infinum/FBAnnotationClustering"
+github "Alamofire/Alamofire"
 github "John-Lluch/SWRevealViewController"
 github "Swinject/Swinject" ~> 1.1.0
