@@ -10,19 +10,6 @@ import UIKit
 import MapKit
 import FBAnnotationClustering
 
-class PlaceAnnotation: NSObject, MKAnnotation {
-    let place: Place
-    init(place: Place) {
-        self.place = place
-    }
-    
-    var coordinate: CLLocationCoordinate2D {
-        return CLLocationCoordinate2DMake(place.latitude, place.longitude)
-    }
-    var title: String? {
-        return PlacePinView.titleForPlace(place)
-    }
-}
 
 class MapViewController: UIViewController, MKMapViewDelegate, FBClusteringManagerDelegate {
     @IBOutlet weak var mapView: MKMapView!
