@@ -44,6 +44,8 @@
 		E828B63D1CB99F2800D1A204 /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = E828B63C1CB99F2800D1A204 /* Functional.swift */; };
 		E83F64931CC3DD4A009142A9 /* EmojiFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83F64921CC3DD4A009142A9 /* EmojiFlags.swift */; };
 		E86F68791CE9FC9F00986588 /* TileSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86F68781CE9FC9F00986588 /* TileSource.swift */; };
+		E86F687B1CE9FDDD00986588 /* TileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86F687A1CE9FDDD00986588 /* TileStorage.swift */; };
+		E86F687D1CE9FDFB00986588 /* TaggingTileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86F687C1CE9FDFB00986588 /* TaggingTileStore.swift */; };
 		E88DCA921CC4006C002BF26B /* RatingExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88DCA911CC4006C002BF26B /* RatingExt.swift */; };
 		E88DCA941CC40360002BF26B /* WaitingTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88DCA931CC40360002BF26B /* WaitingTime.swift */; };
 		E8A163A11CA845300042072C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A163A01CA845300042072C /* AppDelegate.swift */; };
@@ -60,7 +62,7 @@
 		E8CE3D1B1CD801B40066BC53 /* ToMany.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE3D1A1CD801B40066BC53 /* ToMany.swift */; };
 		E8CE3D1C1CD801B40066BC53 /* ToMany.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE3D1A1CD801B40066BC53 /* ToMany.swift */; };
 		E8D25B921CE2724200BB4962 /* TileMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D25B911CE2724200BB4962 /* TileMapper.swift */; };
-		E8D25B941CE3B14300BB4962 /* TileCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D25B931CE3B14300BB4962 /* TileCache.swift */; };
+		E8D25B941CE3B14300BB4962 /* PersistentTileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D25B931CE3B14300BB4962 /* PersistentTileStore.swift */; };
 		E8D25B961CE3CC9200BB4962 /* IO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D25B951CE3CC9200BB4962 /* IO.swift */; };
 		E8D5ABF21CE677BC00F5C313 /* PlaceInfoCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5ABEB1CE677BC00F5C313 /* PlaceInfoCommentCell.swift */; };
 		E8D5ABF31CE677BC00F5C313 /* PlaceInfoCommentsTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5ABEC1CE677BC00F5C313 /* PlaceInfoCommentsTitleCell.swift */; };
@@ -137,6 +139,8 @@
 		E828B63C1CB99F2800D1A204 /* Functional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functional.swift; sourceTree = "<group>"; };
 		E83F64921CC3DD4A009142A9 /* EmojiFlags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiFlags.swift; sourceTree = "<group>"; };
 		E86F68781CE9FC9F00986588 /* TileSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileSource.swift; sourceTree = "<group>"; };
+		E86F687A1CE9FDDD00986588 /* TileStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileStorage.swift; sourceTree = "<group>"; };
+		E86F687C1CE9FDFB00986588 /* TaggingTileStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaggingTileStore.swift; sourceTree = "<group>"; };
 		E88DCA911CC4006C002BF26B /* RatingExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingExt.swift; sourceTree = "<group>"; };
 		E88DCA931CC40360002BF26B /* WaitingTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitingTime.swift; sourceTree = "<group>"; };
 		E8A1639D1CA845300042072C /* Towel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Towel.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,7 +159,7 @@
 		E8BE9FA81CE8CC9E00DDD5C8 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 		E8CE3D1A1CD801B40066BC53 /* ToMany.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToMany.swift; sourceTree = "<group>"; };
 		E8D25B911CE2724200BB4962 /* TileMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileMapper.swift; sourceTree = "<group>"; };
-		E8D25B931CE3B14300BB4962 /* TileCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileCache.swift; sourceTree = "<group>"; };
+		E8D25B931CE3B14300BB4962 /* PersistentTileStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentTileStore.swift; sourceTree = "<group>"; };
 		E8D25B951CE3CC9200BB4962 /* IO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IO.swift; sourceTree = "<group>"; };
 		E8D5ABEB1CE677BC00F5C313 /* PlaceInfoCommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceInfoCommentCell.swift; sourceTree = "<group>"; };
 		E8D5ABEC1CE677BC00F5C313 /* PlaceInfoCommentsTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceInfoCommentsTitleCell.swift; sourceTree = "<group>"; };
@@ -283,7 +287,9 @@
 				E8D25B951CE3CC9200BB4962 /* IO.swift */,
 				E82506681CBC4FAF00458ED4 /* Query.swift */,
 				E88DCA911CC4006C002BF26B /* RatingExt.swift */,
-				E8D25B931CE3B14300BB4962 /* TileCache.swift */,
+				E8D25B931CE3B14300BB4962 /* PersistentTileStore.swift */,
+				E86F687C1CE9FDFB00986588 /* TaggingTileStore.swift */,
+				E86F687A1CE9FDDD00986588 /* TileStorage.swift */,
 				E86F68781CE9FC9F00986588 /* TileSource.swift */,
 				E8D25B911CE2724200BB4962 /* TileMapper.swift */,
 				E8FC3ED01CBC554300B0549E /* Towel.realm */,
@@ -527,7 +533,7 @@
 				E8D5ABF31CE677BC00F5C313 /* PlaceInfoCommentsTitleCell.swift in Sources */,
 				E8240DD61CD004BD00535CE1 /* DBPlaceDescription.swift in Sources */,
 				E8D5ABF61CE677BC00F5C313 /* PlaceInfoStatsCell.swift in Sources */,
-				E8D25B941CE3B14300BB4962 /* TileCache.swift in Sources */,
+				E8D25B941CE3B14300BB4962 /* PersistentTileStore.swift in Sources */,
 				E8D824021CC3A24500046572 /* ClusterPinView.swift in Sources */,
 				E8D5ABFD1CE678B400F5C313 /* MapView+OSM.swift in Sources */,
 				E88DCA921CC4006C002BF26B /* RatingExt.swift in Sources */,
@@ -546,6 +552,7 @@
 				E8D25B921CE2724200BB4962 /* TileMapper.swift in Sources */,
 				E82506691CBC4FAF00458ED4 /* Query.swift in Sources */,
 				E8240DE41CD00C4100535CE1 /* PlaceWaiting.swift in Sources */,
+				E86F687B1CE9FDDD00986588 /* TileStorage.swift in Sources */,
 				E828B63D1CB99F2800D1A204 /* Functional.swift in Sources */,
 				E86F68791CE9FC9F00986588 /* TileSource.swift in Sources */,
 				E8D5ABFB1CE678A400F5C313 /* MapViewController.swift in Sources */,
@@ -553,6 +560,7 @@
 				E8A163A11CA845300042072C /* AppDelegate.swift in Sources */,
 				E82506621CBC4F9D00458ED4 /* Location.swift in Sources */,
 				E82506661CBC4F9D00458ED4 /* PlaceInfo.swift in Sources */,
+				E86F687D1CE9FDFB00986588 /* TaggingTileStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
