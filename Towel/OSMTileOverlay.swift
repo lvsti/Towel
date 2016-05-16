@@ -28,9 +28,11 @@ struct OSMTileSource: TileSource {
 
 class OSMTileOverlay: MKTileOverlay {
     
+    private let _tileStore: ReadOnlyTileStorage
     private let _tileSource: TileSource
     
-    init(tileSource: TileSource) {
+    init(tileStore: ReadOnlyTileStorage, tileSource: TileSource) {
+        _tileStore = tileStore
         _tileSource = tileSource
         super.init(URLTemplate: nil)
         
@@ -42,6 +44,16 @@ class OSMTileOverlay: MKTileOverlay {
 
     override func URLForTilePath(path: MKTileOverlayPath) -> NSURL {
         return _tileSource.urlForTile(TileSpec(path: path))
+    }
+    
+    override func loadTileAtPath(path: MKTileOverlayPath, result: (NSData?, NSError?) -> Void) {
+        let tile = TileSpec(path: path)
+        if let data = _tileStore.dataForTile(tile) {
+            result(data, nil)
+            return
+        }
+        
+        super.loadTileAtPath(path, result: result)
     }
     
 }
