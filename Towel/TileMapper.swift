@@ -46,6 +46,28 @@ extension TileSpec: Hashable {
     var hashValue: Int { return "\(zoomLevel)_\(coordinate.x)_\(coordinate.y)".hashValue }
 }
 
+extension TileSpec {
+    init?(string: String) {
+        let comps: [Int] = string
+            .componentsSeparatedByString("_")
+            .map { Int($0) }
+            .filter { $0 != nil }
+            .map { $0! }
+        
+        guard comps.count == 3 else {
+            return nil
+        }
+        
+        zoomLevel = comps[0]
+        coordinate = TileCoordinate(x: comps[1], y: comps[2])
+    }
+
+    func toString() -> String {
+        return "\(zoomLevel)_\(coordinate.x)_\(coordinate.y)"
+    }
+}
+
+
 enum TileMapperError: ErrorType {
     case InvalidZoomLevel(Int)
     case InvalidMapPoint(MKMapPoint)
