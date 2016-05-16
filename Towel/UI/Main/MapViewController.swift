@@ -6,9 +6,11 @@
 //  Copyright © 2016. Tamas Lustyik. All rights reserved.
 //
 
-import UIKit
 import MapKit
+import UIKit
+
 import FBAnnotationClustering
+import Swinject
 
 
 class MapViewController: UIViewController, MKMapViewDelegate, FBClusteringManagerDelegate {
@@ -20,7 +22,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, FBClusteringManage
     
     required init?(coder aDecoder: NSCoder) {
         _clusteringManager = FBClusteringManager(annotations: [])
-        _tileOverlay = OSMTileOverlay()
+        let container = (UIApplication.sharedApplication().delegate as! AppDelegate).container
+        _tileOverlay = container.resolve(OSMTileOverlay.self)!
         super.init(coder: aDecoder)
     }
     

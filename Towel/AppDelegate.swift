@@ -7,12 +7,39 @@
 //
 
 import UIKit
+import Swinject
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    let container = Container() { c in
+        c.register(TileMapper.self) { _ in TileMapper() }
+        c.register(FileIO.self) { _ in NSFileManager.defaultManager() }
+        c.register(FolderIO.self) { _ in NSFileManager.defaultManager() }
+        c.register(PersistentTileStore.self) { r in
+            let folderIO = r.resolve(FolderIO.self)!
+            let url = folderIO
+                .urlsForDirectory(.ApplicationSupportDirectory, inDomains: .UserDomainMask)
+                .first!
+                .URLByAppendingPathComponent("tiles")
+            
+            return PersistentTileStore(rootFolderURL: url,
+                                       fileIO: r.resolve(FileIO.self)!,
+                                       folderIO: folderIO)
+        }
+        c.register(TaggingTileStore.self) { r in
+            TaggingTileStore(store: r.resolve(PersistentTileStore.self)!,
+                             fileIO: r.resolve(FileIO.self)!,
+                             folderIO: r.resolve(FolderIO.self)!)
+        }
+        c.register(OSMTileSource.self) { _ in OSMTileSource() }
+        c.register(OSMTileOverlay.self) { r in
+            OSMTileOverlay(tileStore: r.resolve(TaggingTileStore.self)!,
+                           tileSource: r.resolve(OSMTileSource.self)!)
+        }
+    }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
