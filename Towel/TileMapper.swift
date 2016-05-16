@@ -14,6 +14,16 @@ struct TileCoordinate {
     let y: Int
 }
 
+extension TileCoordinate: Equatable {}
+
+extension TileCoordinate: Hashable {
+    var hashValue: Int { return "\(x)_\(y)".hashValue }
+}
+
+func ==(lhs: TileCoordinate, rhs: TileCoordinate) -> Bool {
+    return lhs.x == rhs.x && lhs.y == rhs.y
+}
+
 struct TileSpec {
     let coordinate: TileCoordinate
     let zoomLevel: Int
@@ -24,6 +34,16 @@ extension TileSpec {
         coordinate = TileCoordinate(x: path.x, y: path.y)
         zoomLevel = path.z
     }
+}
+
+extension TileSpec: Equatable {}
+
+func ==(lhs: TileSpec, rhs: TileSpec) -> Bool {
+    return lhs.zoomLevel == rhs.zoomLevel && lhs.coordinate == lhs.coordinate
+}
+
+extension TileSpec: Hashable {
+    var hashValue: Int { return "\(zoomLevel)_\(coordinate.x)_\(coordinate.y)".hashValue }
 }
 
 enum TileMapperError: ErrorType {
