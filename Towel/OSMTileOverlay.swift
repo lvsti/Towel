@@ -9,15 +9,29 @@
 import Foundation
 import MapKit
 
-class OSMTileOverlay: MKTileOverlay {
-    
-    static let tileURLTemplates = [
+struct OSMTileSource: TileSource {
+    private static let tileURLTemplates = [
         "https://a.tile.openstreetmap.org/{z}/{x}/{y}.png",
         "https://b.tile.openstreetmap.org/{z}/{x}/{y}.png",
         "https://c.tile.openstreetmap.org/{z}/{x}/{y}.png"
     ]
     
-    init() {
+    func urlForTile(tile: TileSpec) -> NSURL {
+        let template = OSMTileSource.tileURLTemplates[Int(rand()) % OSMTileSource.tileURLTemplates.count]
+        let urlString = template
+            .stringByReplacingOccurrencesOfString("{x}", withString: "\(tile.coordinate.x)")
+            .stringByReplacingOccurrencesOfString("{y}", withString: "\(tile.coordinate.y)")
+            .stringByReplacingOccurrencesOfString("{z}", withString: "\(tile.zoomLevel)")
+        return NSURL(string: urlString)!
+    }
+}
+
+class OSMTileOverlay: MKTileOverlay {
+    
+    private let _tileSource: TileSource
+    
+    init(tileSource: TileSource) {
+        _tileSource = tileSource
         super.init(URLTemplate: nil)
         
         canReplaceMapContent = true
@@ -27,13 +41,7 @@ class OSMTileOverlay: MKTileOverlay {
     }
 
     override func URLForTilePath(path: MKTileOverlayPath) -> NSURL {
-        let template = OSMTileOverlay.tileURLTemplates[Int(rand()) % OSMTileOverlay.tileURLTemplates.count]
-        let urlString = template
-            .stringByReplacingOccurrencesOfString("{x}", withString: "\(path.x)")
-            .stringByReplacingOccurrencesOfString("{y}", withString: "\(path.y)")
-            .stringByReplacingOccurrencesOfString("{z}", withString: "\(path.z)")
-
-        return NSURL(string: urlString)!
+        return _tileSource.urlForTile(TileSpec(path: path))
     }
     
 }

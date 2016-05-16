@@ -43,6 +43,7 @@
 		E828B63B1CB9984900D1A204 /* PlacePinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E828B63A1CB9984900D1A204 /* PlacePinView.swift */; };
 		E828B63D1CB99F2800D1A204 /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = E828B63C1CB99F2800D1A204 /* Functional.swift */; };
 		E83F64931CC3DD4A009142A9 /* EmojiFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83F64921CC3DD4A009142A9 /* EmojiFlags.swift */; };
+		E86F68791CE9FC9F00986588 /* TileSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86F68781CE9FC9F00986588 /* TileSource.swift */; };
 		E88DCA921CC4006C002BF26B /* RatingExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88DCA911CC4006C002BF26B /* RatingExt.swift */; };
 		E88DCA941CC40360002BF26B /* WaitingTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88DCA931CC40360002BF26B /* WaitingTime.swift */; };
 		E8A163A11CA845300042072C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A163A01CA845300042072C /* AppDelegate.swift */; };
@@ -135,6 +136,7 @@
 		E828B63A1CB9984900D1A204 /* PlacePinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacePinView.swift; sourceTree = "<group>"; };
 		E828B63C1CB99F2800D1A204 /* Functional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functional.swift; sourceTree = "<group>"; };
 		E83F64921CC3DD4A009142A9 /* EmojiFlags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiFlags.swift; sourceTree = "<group>"; };
+		E86F68781CE9FC9F00986588 /* TileSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileSource.swift; sourceTree = "<group>"; };
 		E88DCA911CC4006C002BF26B /* RatingExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingExt.swift; sourceTree = "<group>"; };
 		E88DCA931CC40360002BF26B /* WaitingTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitingTime.swift; sourceTree = "<group>"; };
 		E8A1639D1CA845300042072C /* Towel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Towel.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -282,6 +284,7 @@
 				E82506681CBC4FAF00458ED4 /* Query.swift */,
 				E88DCA911CC4006C002BF26B /* RatingExt.swift */,
 				E8D25B931CE3B14300BB4962 /* TileCache.swift */,
+				E86F68781CE9FC9F00986588 /* TileSource.swift */,
 				E8D25B911CE2724200BB4962 /* TileMapper.swift */,
 				E8FC3ED01CBC554300B0549E /* Towel.realm */,
 				E88DCA931CC40360002BF26B /* WaitingTime.swift */,
@@ -544,6 +547,7 @@
 				E82506691CBC4FAF00458ED4 /* Query.swift in Sources */,
 				E8240DE41CD00C4100535CE1 /* PlaceWaiting.swift in Sources */,
 				E828B63D1CB99F2800D1A204 /* Functional.swift in Sources */,
+				E86F68791CE9FC9F00986588 /* TileSource.swift in Sources */,
 				E8D5ABFB1CE678A400F5C313 /* MapViewController.swift in Sources */,
 				E8240DD51CD004BD00535CE1 /* DBPlaceComment.swift in Sources */,
 				E8A163A11CA845300042072C /* AppDelegate.swift in Sources */,
