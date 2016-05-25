@@ -67,6 +67,12 @@ extension TileSpec {
     }
 }
 
+extension MKMapPoint {
+    func isValid() -> Bool {
+        return x >= 0 && x < MKMapSizeWorld.width && y >= 0 && y < MKMapSizeWorld.height
+    }
+}
+
 
 enum TileMapperError: ErrorType {
     case InvalidZoomLevel(Int)
@@ -84,7 +90,7 @@ class TileMapper {
             throw TileMapperError.InvalidZoomLevel(zoomLevel)
         }
         
-        guard point.x >= 0 && point.x < MKMapSizeWorld.width && point.y >= 0 && point.y < MKMapSizeWorld.height else {
+        guard point.isValid() else {
             throw TileMapperError.InvalidMapPoint(point)
         }
 
@@ -103,14 +109,11 @@ class TileMapper {
             throw TileMapperError.InvalidZoomLevel(zoomLevel)
         }
         
-        guard center.x >= 0 && center.x < MKMapSizeWorld.width && center.y >= 0 && center.y < MKMapSizeWorld.height else {
+        guard center.isValid() else {
             throw TileMapperError.InvalidMapPoint(center)
         }
-        
-        let pointsPerTile = MKMapSizeWorld.width / pow(2.0, Double(zoomLevel))
-        let pointsPerPixel = pointsPerTile / TileMapper.tileSize
-        let mapRadius = Double(pixelRadius) * pointsPerPixel
-        
+
+        let mapRadius = mapRadiusFromPixelRadius(pixelRadius, atZoomLevel: zoomLevel)
         let rect = MKMapRectMake(center.x - mapRadius, center.y - mapRadius, 2*mapRadius, 2*mapRadius)
         let tileCount = 1 << zoomLevel
 
@@ -129,6 +132,23 @@ class TileMapper {
         }
         
         return tiles
+    }
+    
+    private func mapRadiusFromPixelRadius(pixelRadius: Int, atZoomLevel zoomLevel: Int) -> Double {
+        let pointsPerTile = MKMapSizeWorld.width / pow(2.0, Double(zoomLevel))
+        let pointsPerPixel = pointsPerTile / TileMapper.tileSize
+        return Double(pixelRadius) * pointsPerPixel
+    }
+    
+}
+
+
+extension TileSpec {
+    
+    var mapRect: MKMapRect {
+        let pointsPerTile = MKMapSizeWorld.width / pow(2.0, Double(zoomLevel))
+        return MKMapRect(origin: MKMapPoint(x: pointsPerTile * Double(coordinate.column), y: pointsPerTile * Double(coordinate.row)),
+                         size: MKMapSize(width: pointsPerTile, height: pointsPerTile))
     }
     
 }
