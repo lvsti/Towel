@@ -19,8 +19,8 @@ struct OSMTileSource: TileSource {
     func urlForTile(tile: TileSpec) -> NSURL {
         let template = OSMTileSource.tileURLTemplates[Int(rand()) % OSMTileSource.tileURLTemplates.count]
         let urlString = template
-            .stringByReplacingOccurrencesOfString("{x}", withString: "\(tile.coordinate.x)")
-            .stringByReplacingOccurrencesOfString("{y}", withString: "\(tile.coordinate.y)")
+            .stringByReplacingOccurrencesOfString("{x}", withString: "\(tile.coordinate.column)")
+            .stringByReplacingOccurrencesOfString("{y}", withString: "\(tile.coordinate.row)")
             .stringByReplacingOccurrencesOfString("{z}", withString: "\(tile.zoomLevel)")
         return NSURL(string: urlString)!
     }

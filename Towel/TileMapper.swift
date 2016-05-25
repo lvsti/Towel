@@ -10,18 +10,18 @@ import Foundation
 import MapKit
 
 struct TileCoordinate {
-    let x: Int
-    let y: Int
+    let row: Int
+    let column: Int
 }
 
 extension TileCoordinate: Equatable {}
 
 extension TileCoordinate: Hashable {
-    var hashValue: Int { return "\(x)_\(y)".hashValue }
+    var hashValue: Int { return "\(row)_\(column)".hashValue }
 }
 
 func ==(lhs: TileCoordinate, rhs: TileCoordinate) -> Bool {
-    return lhs.x == rhs.x && lhs.y == rhs.y
+    return lhs.row == rhs.row && lhs.column == rhs.column
 }
 
 struct TileSpec {
@@ -31,7 +31,7 @@ struct TileSpec {
 
 extension TileSpec {
     init(path: MKTileOverlayPath) {
-        coordinate = TileCoordinate(x: path.x, y: path.y)
+        coordinate = TileCoordinate(row: path.y, column: path.x)
         zoomLevel = path.z
     }
 }
@@ -43,7 +43,7 @@ func ==(lhs: TileSpec, rhs: TileSpec) -> Bool {
 }
 
 extension TileSpec: Hashable {
-    var hashValue: Int { return "\(zoomLevel)_\(coordinate.x)_\(coordinate.y)".hashValue }
+    var hashValue: Int { return "\(zoomLevel)_\(coordinate.row)_\(coordinate.column)".hashValue }
 }
 
 extension TileSpec {
@@ -59,11 +59,11 @@ extension TileSpec {
         }
         
         zoomLevel = comps[0]
-        coordinate = TileCoordinate(x: comps[1], y: comps[2])
+        coordinate = TileCoordinate(row: comps[1], column: comps[2])
     }
 
     func toString() -> String {
-        return "\(zoomLevel)_\(coordinate.x)_\(coordinate.y)"
+        return "\(zoomLevel)_\(coordinate.row)_\(coordinate.column)"
     }
 }
 
@@ -92,8 +92,8 @@ class TileMapper {
         let v = point.y/MKMapSizeWorld.height
 
         let tileCount = 1 << zoomLevel
-        let coord = TileCoordinate(x: Int(u * Double(tileCount)),
-                                   y: Int(v * Double(tileCount)))
+        let coord = TileCoordinate(row: Int(v * Double(tileCount)),
+                                   column: Int(u * Double(tileCount)))
         
         return TileSpec(coordinate: coord, zoomLevel: zoomLevel)
     }
@@ -121,9 +121,9 @@ class TileMapper {
 
         var tiles = [TileSpec]()
         
-        for y in top...bottom {
-            for x in left...right {
-                let tile = TileSpec(coordinate: TileCoordinate(x: x, y: y), zoomLevel: zoomLevel)
+        for row in top...bottom {
+            for column in left...right {
+                let tile = TileSpec(coordinate: TileCoordinate(row: row, column: column), zoomLevel: zoomLevel)
                 tiles.append(tile)
             }
         }

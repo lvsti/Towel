@@ -47,7 +47,7 @@ class PersistentTileStore: TileStorage {
     }
     
     private func urlForTile(tile: TileSpec) -> NSURL {
-        let fileName = "\(tile.zoomLevel)_\(tile.coordinate.x)_\(tile.coordinate.y).png"
+        let fileName = "\(tile.zoomLevel)_\(tile.coordinate.row)_\(tile.coordinate.column).png"
         return _rootFolderURL.URLByAppendingPathComponent(fileName)
     }
     
