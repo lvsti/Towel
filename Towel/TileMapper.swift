@@ -39,7 +39,7 @@ extension TileSpec {
 extension TileSpec: Equatable {}
 
 func ==(lhs: TileSpec, rhs: TileSpec) -> Bool {
-    return lhs.zoomLevel == rhs.zoomLevel && lhs.coordinate == lhs.coordinate
+    return lhs.zoomLevel == rhs.zoomLevel && lhs.coordinate == rhs.coordinate
 }
 
 extension TileSpec: Hashable {
